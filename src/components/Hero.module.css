@@ -1,0 +1,42 @@
+.ctaButton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(
+    to right,
+    theme('colors.brand.yellow'),
+    theme('colors.brand.gold'),
+    theme('colors.brand.bronze')
+  );
+  background-size: 200% auto;
+  color: theme('colors.gray.900');
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  animation: gradientFlow 3s linear infinite;
+  box-shadow: 0 0 15px theme('colors.brand.gold/25');
+}
+
+.ctaButton:hover {
+  box-shadow: 0 0 20px theme('colors.brand.gold/45');
+  transform: translateY(-1px);
+}
+
+.ctaContent {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} 

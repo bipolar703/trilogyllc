@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-gray-900 antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-gradient-to-r from-brand-gold to-brand-bronze text-white rounded-lg 
+           hover:from-brand-bronze hover:to-brand-gold transition-all duration-300 
+           transform hover:scale-105 shadow-md hover:shadow-lg;
+  }
+
+  input, textarea {
+    @apply p-2 border rounded-md focus:ring-2 focus:ring-brand-gold/50 focus:border-brand-gold 
+           outline-none transition-all duration-200;
+  }
+}
+
+@layer utilities {
+  /* RTL Support */
+  .rtl-space-reverse > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 1 !important;
+  }
+
+  /* RTL-aware utility classes */
+  .rtl-aware {
+    @apply ml-0 mr-0;
+  }
+
+  [dir="rtl"] .rtl-aware {
+    @apply ml-auto mr-0;
+  }
+
+  [dir="ltr"] .rtl-aware {
+    @apply ml-0 mr-auto;
+  }
+
+  /* RTL-aware spacing */
+  [dir="rtl"] .space-x-8 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 1;
+    margin-left: calc(2rem * var(--tw-space-x-reverse));
+    margin-right: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  [dir="rtl"] .space-x-2 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 1;
+    margin-left: calc(0.5rem * var(--tw-space-x-reverse));
+    margin-right: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  /* Add to your existing utilities */
+  .backdrop-blur-md {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  /* Fix RTL spacing for slide indicators */
+  [dir="rtl"] .gap-2 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 1;
+    margin-left: calc(0.5rem * var(--tw-space-x-reverse));
+    margin-right: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  [dir="rtl"] .gap-3 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 1;
+    margin-left: calc(0.75rem * var(--tw-space-x-reverse));
+    margin-right: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+}
+
+/* Slideshow animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.slide-enter {
+  animation: fadeIn 1s ease-out;
+}

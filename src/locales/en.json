@@ -1,0 +1,930 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About Us",
+    "contact": "Contact",
+    "language": "Language",
+    "menu": "Menu"
+  },
+  "hero": {
+    "title": "Global Trade & Supply Chain Excellence",
+    "subtitle": "Your Strategic Partner in International Commerce",
+    "description": "Empowering businesses with comprehensive trade solutions and innovative supply chain management",
+    "cta": {
+      "primary": "Explore Our Services",
+      "secondary": "Contact Us",
+      "consultation": "Book Free Consultation"
+    },
+    "stats": {
+      "years": {
+        "number": "15+",
+        "label": "Years Experience"
+      },
+      "clients": {
+        "number": "500+",
+        "label": "Satisfied Clients"
+      },
+      "countries": {
+        "number": "30+",
+        "label": "Countries Served"
+      },
+      "projects": {
+        "number": "1000+",
+        "label": "Projects Completed"
+      }
+    },
+    "features": {
+      "global": "Global Network",
+      "certified": "Certified Experts",
+      "support": "24/7 Support",
+      "solutions": "Custom Solutions"
+    },
+    "slides": [
+      {
+        "title": "Strategic Product Sourcing",
+        "description": "Navigate global markets with confidence",
+        "link": "/services/strategic-sourcing",
+        "ctaText": "Learn More"
+      },
+      {
+        "title": "Logistics Optimization",
+        "description": "Streamline your supply chain operations",
+        "link": "/services/logistics-optimization",
+        "ctaText": "Explore Service"
+      },
+      {
+        "title": "Price Negotiation Mastery",
+        "description": "Expert strategies for optimal pricing",
+        "link": "/services/price-negotiation",
+        "ctaText": "View Details"
+      },
+      {
+        "title": "B2B Services",
+        "description": "Comprehensive solutions for business growth",
+        "link": "/services/b2b-services",
+        "ctaText": "Discover More"
+      },
+      {
+        "title": "Export Documentation",
+        "description": "Streamlined international trade documentation",
+        "link": "/services/export-documentation",
+        "ctaText": "See Details"
+      },
+      {
+        "title": "Import Services",
+        "description": "Your gateway to international markets",
+        "link": "/services/import-services",
+        "ctaText": "Get Started"
+      }
+    ]
+  },
+  "services": {
+    "title": "Our Comprehensive Services",
+    "subtitle": "End-to-End Solutions for Your Business Needs",
+    "description": "We offer a full spectrum of international trade and supply chain services, tailored to meet your specific requirements and drive business growth.",
+    "notFound": "Service not found",
+    "items": {
+      "strategic-sourcing": {
+        "title": "Strategic Product Sourcing",
+        "description": "Navigate global markets to source high-quality goods tailored to your specific needs",
+        "fullDescription": "Our Strategic Product Sourcing service transforms your procurement process through data-driven strategies and global market access. We combine industry expertise with advanced analytics to identify and secure the most suitable suppliers for your specific requirements.",
+        "sections": {
+          "overview": {
+            "title": "Service Overview",
+            "content": [
+              "End-to-end sourcing solutions",
+              "Global supplier network access",
+              "Quality assurance protocols",
+              "Cost optimization strategies"
+            ],
+            "highlights": {
+              "savings": {
+                "number": "25%",
+                "text": "Average cost savings"
+              },
+              "suppliers": {
+                "number": "1000+",
+                "text": "Verified suppliers"
+              },
+              "countries": {
+                "number": "30+",
+                "text": "Sourcing countries"
+              }
+            }
+          },
+          "methodology": {
+            "title": "Our Methodology",
+            "steps": [
+              {
+                "title": "Requirements Analysis",
+                "description": "Detailed assessment of your sourcing needs and specifications"
+              },
+              {
+                "title": "Market Research",
+                "description": "Comprehensive analysis of potential suppliers and market conditions"
+              },
+              {
+                "title": "Supplier Evaluation",
+                "description": "Rigorous vetting process including quality audits and capability assessments"
+              },
+              {
+                "title": "Negotiation",
+                "description": "Strategic price and terms negotiation to secure optimal conditions"
+              }
+            ]
+          }
+        },
+        "benefits": [
+          "Reduced procurement costs",
+          "Improved supplier quality",
+          "Shorter lead times",
+          "Enhanced supply chain reliability",
+          "Access to innovation and new technologies",
+          "Sustainable sourcing options"
+        ],
+        "industries": [
+          "Manufacturing",
+          "Retail",
+          "Technology",
+          "Healthcare",
+          "Construction"
+        ]
+      },
+      "logistics-optimization": {
+        "title": "Logistics Optimization",
+        "description": "Streamline your supply chain operations with our comprehensive logistics solutions",
+        "fullDescription": "Transform your supply chain with our advanced logistics optimization services. We leverage data analytics and industry expertise to create efficient, cost-effective logistics solutions tailored to your business needs.",
+        "sections": {
+          "overview": {
+            "title": "Service Overview",
+            "content": [
+              "End-to-end logistics management",
+              "Real-time tracking and visibility",
+              "Multi-modal transportation solutions",
+              "Warehouse optimization"
+            ],
+            "highlights": {
+              "efficiency": {
+                "number": "40%",
+                "text": "Improved efficiency"
+              },
+              "coverage": {
+                "number": "Global",
+                "text": "Network coverage"
+              },
+              "savings": {
+                "number": "20%",
+                "text": "Cost reduction"
+              }
+            }
+          },
+          "solutions": {
+            "title": "Our Solutions",
+            "categories": [
+              {
+                "title": "Transportation Management",
+                "features": [
+                  "Route optimization",
+                  "Carrier selection",
+                  "Load consolidation",
+                  "Real-time tracking"
+                ]
+              },
+              {
+                "title": "Warehouse Operations",
+                "features": [
+                  "Layout optimization",
+                  "Inventory management",
+                  "Process automation",
+                  "Quality control"
+                ]
+              },
+              {
+                "title": "Supply Chain Visibility",
+                "features": [
+                  "Real-time monitoring",
+                  "Performance analytics",
+                  "Risk management",
+                  "Predictive insights"
+                ]
+              }
+            ]
+          }
+        },
+        "benefits": [
+          "Reduced transportation costs",
+          "Improved delivery times",
+          "Enhanced visibility",
+          "Optimized inventory levels",
+          "Better customer satisfaction",
+          "Reduced carbon footprint"
+        ],
+        "industries": [
+          "Retail",
+          "Manufacturing",
+          "E-commerce",
+          "Food & Beverage",
+          "Automotive"
+        ]
+      },
+      "price-negotiation": {
+        "title": "Price Negotiation",
+        "description": "Expert strategies for optimal pricing and contract negotiations",
+        "fullDescription": "Our Price Negotiation service provides expert guidance and representation to secure the most favorable terms and pricing for your business transactions. We combine market intelligence with proven negotiation techniques to maximize your value.",
+        "sections": {
+          "overview": {
+            "title": "Service Overview",
+            "content": [
+              "Strategic negotiation planning",
+              "Market price analysis",
+              "Contract term optimization",
+              "Risk assessment and mitigation"
+            ],
+            "highlights": {
+              "savings": {
+                "number": "30%",
+                "text": "Average savings achieved"
+              },
+              "success": {
+                "number": "95%",
+                "text": "Success rate"
+              },
+              "deals": {
+                "number": "500+",
+                "text": "Deals negotiated"
+              }
+            }
+          },
+          "methodology": {
+            "title": "Our Approach",
+            "steps": [
+              {
+                "title": "Situation Analysis",
+                "description": "Comprehensive assessment of your negotiation position and objectives"
+              },
+              {
+                "title": "Strategy Development",
+                "description": "Creation of customized negotiation strategies and tactics"
+              },
+              {
+                "title": "Execution",
+                "description": "Expert representation in negotiations with counterparties"
+              },
+              {
+                "title": "Implementation",
+                "description": "Support in finalizing and implementing negotiated terms"
+              }
+            ]
+          }
+        },
+        "benefits": [
+          "Better pricing terms",
+          "Improved contract conditions",
+          "Reduced risk exposure",
+          "Stronger business relationships",
+          "Time and resource savings",
+          "Expert representation"
+        ],
+        "industries": [
+          "International Trade",
+          "Manufacturing",
+          "Services",
+          "Technology",
+          "Construction"
+        ]
+      },
+      "b2b-services": {
+        "title": "B2B Services",
+        "description": "Comprehensive solutions for business growth",
+        "fullDescription": "Our B2B Services provide end-to-end solutions for businesses looking to expand their market presence and optimize their operations. We combine industry expertise with innovative strategies to help you build strong business relationships and achieve sustainable growth.",
+        "sections": {
+          "overview": {
+            "title": "Service Overview",
+            "content": [
+              "Market expansion strategies",
+              "Business partnership development",
+              "Trade facilitation services",
+              "Growth optimization solutions"
+            ],
+            "highlights": {
+              "partnerships": {
+                "number": "200+",
+                "text": "Active partnerships"
+              },
+              "markets": {
+                "number": "15+",
+                "text": "Market regions"
+              },
+              "growth": {
+                "number": "45%",
+                "text": "Average growth rate"
+              }
+            }
+          },
+          "solutions": {
+            "title": "Business Solutions",
+            "categories": [
+              {
+                "title": "Market Entry",
+                "features": [
+                  "Market analysis",
+                  "Entry strategy",
+                  "Partner identification",
+                  "Risk assessment"
+                ]
+              },
+              {
+                "title": "Business Development",
+                "features": [
+                  "Partnership building",
+                  "Network expansion",
+                  "Growth planning",
+                  "Performance monitoring"
+                ]
+              },
+              {
+                "title": "Trade Services",
+                "features": [
+                  "Trade facilitation",
+                  "Documentation support",
+                  "Compliance management",
+                  "Transaction processing"
+                ]
+              }
+            ]
+          }
+        },
+        "benefits": [
+          "Accelerated market entry",
+          "Expanded business network",
+          "Reduced operational risks",
+          "Improved market presence",
+          "Enhanced business efficiency",
+          "Sustainable growth"
+        ],
+        "industries": [
+          "Manufacturing",
+          "Technology",
+          "Professional Services",
+          "Retail",
+          "Distribution"
+        ]
+      },
+      "export-documentation": {
+        "title": "Export Documentation",
+        "description": "Streamlined international trade documentation",
+        "fullDescription": "Our Export Documentation service ensures complete compliance and efficiency in your international trade operations. We handle all aspects of trade documentation, from preparation to verification, making your export processes smooth and compliant.",
+        "sections": {
+          "overview": {
+            "title": "Service Overview",
+            "content": [
+              "Comprehensive documentation management",
+              "Compliance verification",
+              "Digital document processing",
+              "Real-time status tracking"
+            ],
+            "highlights": {
+              "accuracy": {
+                "number": "99.9%",
+                "text": "Documentation accuracy"
+              },
+              "processing": {
+                "number": "24h",
+                "text": "Average processing time"
+              },
+              "compliance": {
+                "number": "100%",
+                "text": "Regulatory compliance"
+              }
+            }
+          },
+          "documentation": {
+            "title": "Documentation Services",
+            "categories": [
+              {
+                "title": "Commercial Documents",
+                "items": [
+                  "Commercial Invoices",
+                  "Packing Lists",
+                  "Bills of Lading",
+                  "Certificates of Origin"
+                ]
+              },
+              {
+                "title": "Regulatory Documents",
+                "items": [
+                  "Export Licenses",
+                  "Health Certificates",
+                  "Safety Declarations",
+                  "Customs Declarations"
+                ]
+              },
+              {
+                "title": "Financial Documents",
+                "items": [
+                  "Letter of Credit",
+                  "Bank Documents",
+                  "Insurance Certificates",
+                  "Payment Terms Documentation"
+                ]
+              }
+            ]
+          }
+        },
+        "benefits": [
+          "Reduced documentation errors",
+          "Faster processing times",
+          "Complete compliance assurance",
+          "Digital document management",
+          "Real-time tracking capability",
+          "Expert regulatory guidance"
+        ],
+        "industries": [
+          "Manufacturing",
+          "Agriculture",
+          "Pharmaceuticals",
+          "Textiles",
+          "Electronics"
+        ]
+      },
+      "import-services": {
+        "title": "Import Services",
+        "description": "Your gateway to international markets",
+        "fullDescription": "Our Import Services provide end-to-end support for businesses looking to source products internationally. From supplier identification to customs clearance, we ensure a smooth and compliant import process tailored to your specific needs.",
+        "sections": {
+          "overview": {
+            "title": "Service Overview",
+            "content": [
+              "Complete import management",
+              "Customs clearance handling",
+              "Regulatory compliance",
+              "Supply chain optimization"
+            ],
+            "highlights": {
+              "clearance": {
+                "number": "12h",
+                "text": "Average clearance time"
+              },
+              "savings": {
+                "number": "30%",
+                "text": "Cost reduction"
+              },
+              "compliance": {
+                "number": "100%",
+                "text": "Regulatory adherence"
+              }
+            }
+          },
+          "solutions": {
+            "title": "Import Solutions",
+            "categories": [
+              {
+                "title": "Customs Management",
+                "features": [
+                  "Declaration processing",
+                  "Duty optimization",
+                  "Compliance assurance",
+                  "Documentation handling"
+                ]
+              },
+              {
+                "title": "Supply Chain",
+                "features": [
+                  "Supplier coordination",
+                  "Inventory management",
+                  "Warehouse solutions",
+                  "Distribution planning"
+                ]
+              },
+              {
+                "title": "Risk Management",
+                "features": [
+                  "Quality control",
+                  "Insurance coverage",
+                  "Regulatory compliance",
+                  "Market analysis"
+                ]
+              }
+            ]
+          }
+        },
+        "benefits": [
+          "Streamlined import process",
+          "Customs compliance assurance",
+          "Cost-effective solutions",
+          "Reduced administrative burden",
+          "Risk management",
+          "Time-efficient operations"
+        ],
+        "industries": [
+          "Retail",
+          "Manufacturing",
+          "Distribution",
+          "E-commerce",
+          "Consumer Goods"
+        ]
+      }
+    },
+    "readyToTransform": "Ready to Transform Your Business?",
+    "contactToday": "Contact us today to discuss how our integrated services can help improve your operations and drive company growth",
+    "getStartedToday": "Get Started Today",
+    "keyBenefits": "Key Benefits",
+    "industries": "Industries",
+    "moreIndustries": "+ {{count}} more",
+    "features": {
+      "supplyChain": {
+        "feature1": "End-to-end visibility",
+        "feature2": "Real-time tracking",
+        "feature3": "Cost optimization",
+        "feature4": "Sustainability planning"
+      },
+      "qualityControl": {
+        "feature1": "Quality standards implementation",
+        "feature2": "Product inspection",
+        "feature3": "Certification management",
+        "feature4": "Quality assurance protocols"
+      },
+      "marketAnalysis": {
+        "feature1": "Market trend analysis",
+        "feature2": "Competitive intelligence",
+        "feature3": "Opportunity identification",
+        "feature4": "Growth strategy development"
+      }
+    },
+    "viewAll": "View All Services",
+    "viewAllDescription": "Explore our complete range of international trade services"
+  },
+  "about": {
+    "title": "About Trilogy Trading",
+    "subtitle": "Your Trusted Partner in Global Trade",
+    "description": "With over 15 years of experience in international trade and supply chain management, we deliver innovative solutions that drive business growth and operational excellence.",
+    "whoWeAre": {
+      "title": "Who We Are",
+      "description": "A leading international trading company with years of experience in global commerce",
+      "highlights": [
+        "Established in 2009",
+        "Headquartered in Dubai, UAE",
+        "Operating in 30+ countries",
+        "500+ satisfied clients worldwide"
+      ]
+    },
+    "cards": {
+      "mission": {
+        "title": "Our Mission",
+        "description": "To empower businesses worldwide through innovative trade solutions and exceptional service, facilitating seamless global commerce and sustainable growth."
+      },
+      "vision": {
+        "title": "Our Vision",
+        "description": "To be the world's most trusted and innovative trading partner, setting new standards in global commerce and supply chain excellence."
+      },
+      "values": {
+        "title": "Our Values",
+        "description": "Integrity, excellence, innovation, and customer-centricity guide every aspect of our operations and relationships."
+      },
+      "commitment": {
+        "title": "Our Commitment",
+        "description": "Delivering unparalleled value through sustainable practices, ethical business conduct, and continuous improvement in all our services."
+      },
+      "experience": {
+        "title": "Our Experience",
+        "description": "Over 15 years of proven expertise in international trade, serving diverse industries across global markets with demonstrated success."
+      },
+      "expertise": {
+        "title": "Our Expertise",
+        "description": "Specialized knowledge in global trade, logistics optimization, and supply chain management, backed by certified professionals."
+      }
+    },
+    "features": {
+      "globalReach": {
+        "title": "Global Reach",
+        "description": "Extensive network of partners and suppliers worldwide",
+        "points": [
+          "Strategic partnerships in key markets",
+          "Local expertise in major trade hubs",
+          "Strong supplier relationships",
+          "Worldwide logistics network"
+        ],
+        "cards": [
+          {
+            "title": "Market Access",
+            "description": "Direct access to major global markets and trade routes"
+          },
+          {
+            "title": "Local Presence",
+            "description": "Established offices and representatives in key regions"
+          },
+          {
+            "title": "Partner Network",
+            "description": "Extensive network of verified suppliers and partners"
+          }
+        ]
+      },
+      "expertTeam": {
+        "title": "Expert Team",
+        "description": "Seasoned professionals in international trade and supply chain",
+        "points": [
+          "Industry veterans with 15+ years experience",
+          "Multilingual trade specialists",
+          "Certified logistics professionals",
+          "Dedicated account managers"
+        ],
+        "cards": [
+          {
+            "title": "Industry Experience",
+            "description": "Team of seasoned professionals with deep industry knowledge"
+          },
+          {
+            "title": "Specialized Skills",
+            "description": "Experts in trade, logistics, and supply chain management"
+          },
+          {
+            "title": "Dedicated Support",
+            "description": "Personal account managers for every client"
+          }
+        ]
+      },
+      "customSolutions": {
+        "title": "Custom Solutions",
+        "description": "Tailored approach to meet your unique business needs",
+        "points": [
+          "Personalized service packages",
+          "Industry-specific solutions",
+          "Flexible engagement models",
+          "Scalable services"
+        ],
+        "cards": [
+          {
+            "title": "Tailored Services",
+            "description": "Solutions customized to your specific requirements"
+          },
+          {
+            "title": "Flexible Models",
+            "description": "Adaptable engagement options to suit your business"
+          },
+          {
+            "title": "Scalable Growth",
+            "description": "Solutions that grow with your business needs"
+          }
+        ]
+      },
+      "innovation": {
+        "title": "Innovation & Technology",
+        "description": "Leveraging cutting-edge solutions for optimal results",
+        "cards": [
+          {
+            "title": "Digital Solutions",
+            "description": "Advanced platforms for seamless operations"
+          },
+          {
+            "title": "Data Analytics",
+            "description": "Insights-driven decision making tools"
+          },
+          {
+            "title": "Process Automation",
+            "description": "Streamlined workflows and efficiency"
+          }
+        ]
+      }
+    },
+    "stats": {
+      "experience": {
+        "number": "15+",
+        "label": "Years of Excellence"
+      },
+      "clients": {
+        "number": "500+",
+        "label": "Global Clients"
+      },
+      "countries": {
+        "number": "30+",
+        "label": "Countries Served"
+      },
+      "team": {
+        "number": "50+",
+        "label": "Expert Staff"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Let's Discuss Your Global Trade Requirements",
+    "description": "Our team of experts is ready to help you optimize your international trade operations",
+    "form": {
+      "title": "Send us a message",
+      "name": {
+        "label": "Name",
+        "placeholder": "Enter your full name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Enter your email address"
+      },
+      "phone": {
+        "label": "Phone (optional)",
+        "placeholder": "Enter your phone number"
+      },
+      "company": {
+        "label": "Company (optional)",
+        "placeholder": "Enter your company name"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "How can we help you?"
+      },
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "submitSuccess": "Thank you for your message. We'll get back to you soon!",
+      "submitError": "Sorry, there was an error sending your message. Please try again."
+    },
+    "office": {
+      "title": "Our Office",
+      "address": {
+        "name": "Trilogy Trading LLC",
+        "street": "Wasfi Al Tal St.",
+        "city": "Amman",
+        "country": "Jordan",
+        "poBox": "P.O. Box: 123456",
+        "phone": "+962 79 687 2273",
+        "email": "info@trilogytradingllc.com",
+        "hours": {
+          "title": "Working Hours",
+          "weekdays": "Sunday - Thursday: 9:00 AM - 5:00 PM",
+          "weekend": "Friday - Saturday: Closed"
+        }
+      }
+    }
+  },
+  "footer": {
+    "company": {
+      "name": "Trilogy Trading LLC",
+      "description": "Your trusted partner in global trade and supply chain solutions",
+      "rights": "© 2024 Trilogy Trading LLC. All rights reserved."
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "items": {
+        "home": {
+          "text": "Home",
+          "path": "/"
+        },
+        "services": {
+          "text": "Services",
+          "path": "/services"
+        },
+        "about": {
+          "text": "About Us",
+          "path": "/#about"
+        },
+        "contact": {
+          "text": "Contact",
+          "path": "/#contact"
+        }
+      }
+    },
+    "services": {
+      "title": "Our Services",
+      "items": {
+        "strategicSourcing": {
+          "text": "Strategic Sourcing",
+          "path": "/services/strategic-sourcing"
+        },
+        "logistics": {
+          "text": "Logistics Optimization",
+          "path": "/services/logistics-optimization"
+        },
+        "import": {
+          "text": "Import Services",
+          "path": "/services/import-services"
+        },
+        "viewAll": {
+          "text": "View All Services →",
+          "path": "/services"
+        }
+      }
+    },
+    "contact": {
+      "title": "Contact Info",
+      "address": "Wasfi Al Tal St., Amman, Jordan",
+      "phone": "+962 79 687 2273",
+      "phoneDisplay": "+962 79 687 2273",
+      "email": "info@trilogytradingllc.com"
+    },
+    "social": {
+      "title": "Follow Us",
+      "links": {
+        "linkedin": {
+          "text": "LinkedIn",
+          "url": "#"
+        },
+        "twitter": {
+          "text": "Twitter",
+          "url": "#"
+        },
+        "facebook": {
+          "text": "Facebook",
+          "url": "#"
+        }
+      }
+    },
+    "legal": {
+      "privacy": {
+        "text": "Privacy Policy",
+        "path": "/privacy"
+      },
+      "terms": {
+        "text": "Terms of Service",
+        "path": "/terms"
+      }
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "required": "Required",
+    "readMore": "Read More",
+    "viewAll": "View All",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "success": {
+      "formSubmission": "Your message has been sent successfully",
+      "subscription": "Thank you for subscribing",
+      "update": "Changes saved successfully"
+    },
+    "errors": {
+      "formSubmission": "There was an error submitting the form",
+      "invalidEmail": "Please enter a valid email address",
+      "required": "This field is required",
+      "generic": "Something went wrong. Please try again"
+    },
+    "buttons": {
+      "learnMore": "Learn More",
+      "exploreService": "Explore Service",
+      "viewDetails": "View Details",
+      "discoverMore": "Discover More",
+      "seeDetails": "See Details",
+      "getStarted": "Get Started"
+    },
+    "chatWithUs": "Chat with us"
+  },
+  "accessibility": {
+    "openMenu": "Open main menu",
+    "closeMenu": "Close menu",
+    "previousSlide": "Previous slide",
+    "nextSlide": "Next slide",
+    "goToSlide": "Go to slide",
+    "changeLanguage": "Change language",
+    "loading": "Loading content",
+    "error": "Error loading content",
+    "required": "This field is required",
+    "navigation": "Main navigation",
+    "skipToContent": "Skip to main content",
+    "menuButton": "Toggle menu"
+  },
+  "serviceDetail": {
+    "title": "Service Details",
+    "backToServices": "Back to Services",
+    "sections": {
+      "overview": "Overview",
+      "benefits": "Benefits",
+      "process": "Our Process",
+      "features": "Key Features",
+      "industries": "Industries We Serve"
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "description": "Contact us to learn how this service can benefit your business",
+      "button": "Contact Us Now"
+    }
+  },
+  "ui": {
+    "loading": {
+      "text": "Loading",
+      "service": "Loading service details",
+      "content": "Loading content"
+    },
+    "errors": {
+      "service": "Service not found",
+      "loading": "Error loading content",
+      "generic": "Something went wrong"
+    },
+    "navigation": {
+      "previous": "Previous",
+      "next": "Next",
+      "back": "Back",
+      "more": "More"
+    }
+  },
+  "chat": {
+    "open": "Start a conversation",
+    "whatsapp": "Continue on WhatsApp",
+    "liveChat": "Chat with us now",
+    "chatWithUs": "Chat with us",
+    "offlineMessage": "We're currently offline. Leave us a message and we'll get back to you soon.",
+    "placeholder": "Type your message here...",
+    "whatsappSubtext": "Via WhatsApp",
+    "liveChatSubtext": "Chat with us now"
+  }
+}

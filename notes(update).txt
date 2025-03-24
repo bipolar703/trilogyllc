@@ -1,0 +1,4 @@
+1. Add a bot chat to the website that has website information and can answer questions.
+2. Fix the contact form translation in arabic
+3. Add a custom loading spinner using the logo
+4. Add a custom 404 page

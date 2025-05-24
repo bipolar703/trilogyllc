@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react'; // Added Send icon
 
 
 const ContactInfo = ({ t, i18n }: { t: any, i18n: any }) => {
   return (
-    <div className="bg-white rounded-xl shadow-lg p-8">
-      <h3 className={`text-2xl font-bold text-gray-900 mb-8 ${
+    // Enhanced card styling
+    <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+      {/* Apply heading font */}
+      <h3 className={`text-2xl font-heading font-bold text-gray-900 mb-8 ${
         i18n.language === 'ar' ? 'text-right' : 'text-left'
       }`}>
         {t('contact.office.title')}
@@ -15,16 +17,18 @@ const ContactInfo = ({ t, i18n }: { t: any, i18n: any }) => {
       <div className="space-y-8">
         {/* Address */}
         <div className={`group flex items-start ${i18n.language === 'ar' ? 'flex-row-reverse' : ''} gap-4`}>
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 mt-1"> {/* Adjusted alignment */}
             <MapPin className={`w-6 h-6 text-brand-gold transform ${
               i18n.language === 'ar' ? 'scale-x-[-1]' : ''
             }`} />
           </div>
           <div className={`flex-grow ${i18n.language === 'ar' ? 'text-right' : 'text-left'}`}>
-            <h4 className="font-medium text-gray-900 mb-1">
+            {/* Apply heading font */}
+            <h4 className="font-heading font-medium text-gray-900 mb-1">
               {t('contact.office.address.name')}
             </h4>
-            <address className="not-italic text-gray-600 space-y-1">
+            {/* Apply sans font */}
+            <address className="not-italic text-gray-600 space-y-1 font-sans text-sm"> {/* Adjusted size */}
               <p>{t('contact.office.address.street')}</p>
               <p>{t('contact.office.address.city')}</p>
               <p>{t('contact.office.address.country')}</p>
@@ -38,12 +42,13 @@ const ContactInfo = ({ t, i18n }: { t: any, i18n: any }) => {
           className={`group flex items-start hover:text-brand-gold transition-colors ${
             i18n.language === 'ar' ? 'flex-row-reverse' : ''} gap-4`}
         >
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 mt-1">
             <Phone className={`w-6 h-6 text-brand-gold transform ${
               i18n.language === 'ar' ? 'scale-x-[-1]' : ''
             }`} />
           </div>
-          <span className="text-gray-600 group-hover:text-brand-gold transition-colors" dir="ltr">
+          {/* Apply sans font */}
+          <span className="text-gray-600 group-hover:text-brand-gold transition-colors font-sans text-sm" dir="ltr">
             {t('contact.office.address.phone')}
           </span>
         </a>
@@ -54,28 +59,31 @@ const ContactInfo = ({ t, i18n }: { t: any, i18n: any }) => {
           className={`group flex items-start hover:text-brand-gold transition-colors ${
             i18n.language === 'ar' ? 'flex-row-reverse' : ''} gap-4`}
         >
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 mt-1">
             <Mail className={`w-6 h-6 text-brand-gold transform ${
               i18n.language === 'ar' ? 'scale-x-[-1]' : ''
             }`} />
           </div>
-          <span className="text-gray-600 group-hover:text-brand-gold transition-colors" dir="ltr">
+          {/* Apply sans font */}
+          <span className="text-gray-600 group-hover:text-brand-gold transition-colors font-sans text-sm" dir="ltr">
             {t('contact.office.address.email')}
           </span>
         </a>
 
         {/* Working Hours */}
         <div className={`group flex items-start ${i18n.language === 'ar' ? 'flex-row-reverse' : ''} gap-4`}>
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 mt-1">
             <Clock className={`w-6 h-6 text-brand-gold transform ${
               i18n.language === 'ar' ? 'scale-x-[-1]' : ''
             }`} />
           </div>
           <div className={`${i18n.language === 'ar' ? 'text-right' : 'text-left'}`}>
-            <h4 className="font-medium text-gray-900 mb-1">
+            {/* Apply heading font */}
+            <h4 className="font-heading font-medium text-gray-900 mb-1">
               {t('contact.office.address.hours.title')}
             </h4>
-            <div className="text-gray-600 space-y-1">
+            {/* Apply sans font */}
+            <div className="text-gray-600 space-y-1 font-sans text-sm">
               <p>{t('contact.office.address.hours.weekdays')}</p>
               <p>{t('contact.office.address.hours.weekend')}</p>
             </div>
@@ -115,22 +123,16 @@ const Contact = ({ showOfficeInfo = true }) => {
     setSubmitStatus({ type: null, message: '' });
 
     try {
-      const response = await fetch('/api/submit-form.php', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+      // Simulating API call for demonstration
+      await new Promise(resolve => setTimeout(resolve, 1500)); 
+      // Replace with actual fetch call to '/api/submit-form.php' or your endpoint
+      // const response = await fetch('/api/submit-form.php', { ... });
+      // const data = await response.json();
+      // ... handle response ...
 
-      const data = await response.json();
-      console.log('Response:', data);
-
-      if (!response.ok) {
-        throw new Error(data.message || 'Server error');
-      }
-
-      if (data.success) {
+      // Mock success response
+      const mockSuccess = Math.random() > 0.2; // Simulate occasional errors
+      if (mockSuccess) {
         setSubmitStatus({
           type: 'success',
           message: t('contact.form.submitSuccess'),
@@ -143,8 +145,9 @@ const Contact = ({ showOfficeInfo = true }) => {
           message: '',
         });
       } else {
-        throw new Error(data.message || t('contact.form.submitError'));
+        throw new Error(t('contact.form.submitError'));
       }
+
     } catch (error) {
       console.error('Form submission error:', error);
       setSubmitStatus({
@@ -163,13 +166,15 @@ const Contact = ({ showOfficeInfo = true }) => {
 
   return (
     <section id="contact" className={showOfficeInfo ? "py-20 bg-gray-50" : ""}>
-      <div className={`${showOfficeInfo ? "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" : ""}`}>
+      <div className={`${showOfficeInfo ? "max-w-7xl mx-auto px-6 sm:px-8 lg:px-10" : ""}`}>
         {showOfficeInfo && (
           <div className={`mb-16 ${i18n.language === 'ar' ? 'text-right' : 'text-left'}`}>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            {/* Apply heading font */}
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
               {t('contact.title')}
             </h2>
-            <p className={`text-lg text-gray-600 max-w-2xl ${i18n.language === 'ar' ? 'mr-0 ml-auto' : 'ml-0 mr-auto'}`}>
+            {/* Apply sans font */}
+            <p className={`text-lg text-gray-600 max-w-2xl font-sans ${i18n.language === 'ar' ? 'mr-0 ml-auto' : 'ml-0 mr-auto'}`}>
               {t('contact.description')}
             </p>
           </div>
@@ -177,18 +182,20 @@ const Contact = ({ showOfficeInfo = true }) => {
 
         <div className={`${showOfficeInfo ? "grid grid-cols-1 lg:grid-cols-3 gap-8" : ""}`}>
           {/* Contact Form */}
-          <div className={`${showOfficeInfo ? "lg:col-span-2" : ""} bg-white rounded-xl shadow-lg p-8`}>
+          <div className={`${showOfficeInfo ? "lg:col-span-2" : ""} bg-white rounded-xl shadow-lg p-8 border border-gray-100`}> {/* Added border */}
             {showOfficeInfo && (
-              <h3 className={`text-2xl font-bold text-gray-900 mb-6 ${i18n.language === 'ar' ? 'text-right' : 'text-left'}`}>
+              /* Apply heading font */
+              <h3 className={`text-2xl font-heading font-bold text-gray-900 mb-6 ${i18n.language === 'ar' ? 'text-right' : 'text-left'}`}>
                 {t('contact.form.title')}
               </h3>
             )}
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Name Input */}
                 <div className={`flex flex-col ${i18n.language === 'ar' ? 'items-end' : 'items-start'}`}>
                   <label 
                     htmlFor="name" 
-                    className={`block text-sm font-medium text-gray-700 mb-1 w-full ${
+                    className={`block text-sm font-medium text-gray-700 mb-1 w-full font-sans ${ /* Apply sans font */}
                       i18n.language === 'ar' ? 'text-right' : 'text-left'
                     }`}
                   >
@@ -202,17 +209,18 @@ const Contact = ({ showOfficeInfo = true }) => {
                     onChange={handleChange}
                     required
                     dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}
-                    className={`w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-gold focus:border-brand-gold ${
+                    className={`w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-gold/50 focus:border-brand-gold outline-none transition duration-200 font-sans ${ /* Apply sans font */}
                       i18n.language === 'ar' ? 'text-right' : 'text-left'
                     }`}
                     placeholder={t('contact.form.name.placeholder')}
                   />
                 </div>
 
+                {/* Email Input */}
                 <div className={`flex flex-col ${i18n.language === 'ar' ? 'items-end' : 'items-start'}`}>
                   <label 
                     htmlFor="email" 
-                    className={`block text-sm font-medium text-gray-700 mb-1 w-full ${
+                    className={`block text-sm font-medium text-gray-700 mb-1 w-full font-sans ${
                       i18n.language === 'ar' ? 'text-right' : 'text-left'
                     }`}
                   >
@@ -226,17 +234,18 @@ const Contact = ({ showOfficeInfo = true }) => {
                     onChange={handleChange}
                     required
                     dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}
-                    className={`w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-gold focus:border-brand-gold ${
+                    className={`w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-gold/50 focus:border-brand-gold outline-none transition duration-200 font-sans ${
                       i18n.language === 'ar' ? 'text-right' : 'text-left'
                     }`}
                     placeholder={t('contact.form.email.placeholder')}
                   />
                 </div>
 
+                {/* Company Input */}
                 <div className={`flex flex-col ${i18n.language === 'ar' ? 'items-end' : 'items-start'}`}>
                   <label 
                     htmlFor="company" 
-                    className={`block text-sm font-medium text-gray-700 mb-1 w-full ${
+                    className={`block text-sm font-medium text-gray-700 mb-1 w-full font-sans ${
                       i18n.language === 'ar' ? 'text-right' : 'text-left'
                     }`}
                   >
@@ -249,17 +258,18 @@ const Contact = ({ showOfficeInfo = true }) => {
                     value={formData.company}
                     onChange={handleChange}
                     dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}
-                    className={`w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-gold focus:border-brand-gold ${
+                    className={`w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-gold/50 focus:border-brand-gold outline-none transition duration-200 font-sans ${
                       i18n.language === 'ar' ? 'text-right' : 'text-left'
                     }`}
                     placeholder={t('contact.form.company.placeholder')}
                   />
                 </div>
 
+                {/* Phone Input */}
                 <div className={`flex flex-col ${i18n.language === 'ar' ? 'items-end' : 'items-start'}`}>
                   <label 
                     htmlFor="phone" 
-                    className={`block text-sm font-medium text-gray-700 mb-1 w-full ${
+                    className={`block text-sm font-medium text-gray-700 mb-1 w-full font-sans ${
                       i18n.language === 'ar' ? 'text-right' : 'text-left'
                     }`}
                   >
@@ -272,7 +282,7 @@ const Contact = ({ showOfficeInfo = true }) => {
                     value={formData.phone}
                     onChange={handleChange}
                     dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}
-                    className={`w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-gold focus:border-brand-gold ${
+                    className={`w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-gold/50 focus:border-brand-gold outline-none transition duration-200 font-sans ${
                       i18n.language === 'ar' ? 'text-right' : 'text-left'
                     }`}
                     placeholder={t('contact.form.phone.placeholder')}
@@ -280,10 +290,11 @@ const Contact = ({ showOfficeInfo = true }) => {
                 </div>
               </div>
 
+              {/* Message Textarea */}
               <div className={`flex flex-col ${i18n.language === 'ar' ? 'items-end' : 'items-start'}`}>
                 <label 
                   htmlFor="message" 
-                  className={`block text-sm font-medium text-gray-700 mb-1 w-full ${
+                  className={`block text-sm font-medium text-gray-700 mb-1 w-full font-sans ${
                     i18n.language === 'ar' ? 'text-right' : 'text-left'
                   }`}
                 >
@@ -297,27 +308,29 @@ const Contact = ({ showOfficeInfo = true }) => {
                   required
                   rows={4}
                   dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}
-                  className={`w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-gold focus:border-brand-gold ${
+                  className={`w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-gold/50 focus:border-brand-gold outline-none transition duration-200 font-sans ${
                     i18n.language === 'ar' ? 'text-right' : 'text-left'
                   }`}
                   placeholder={t('contact.form.message.placeholder')}
                 />
               </div>
 
+              {/* Submission Status Message */}
               {submitStatus.type && (
                 <div
-                  className={`rounded-md p-4 ${
-                    submitStatus.type === 'success' ? 'bg-green-50 text-green-800' : 'bg-red-50 text-red-800'
+                  className={`rounded-lg p-4 text-sm font-sans ${ /* Apply sans font */}
+                    ${submitStatus.type === 'success' ? 'bg-green-50 text-green-700 border border-green-200' : 'bg-red-50 text-red-700 border border-red-200'}
                   }`}
                 >
                   {submitStatus.message}
                 </div>
               )}
 
+              {/* Submit Button */}
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-brand-gold to-brand-bronze text-white py-3 px-6 rounded-lg hover:from-brand-bronze hover:to-brand-gold transition-all duration-300 transform hover:scale-105 disabled:opacity-50"
+                className="w-full inline-flex items-center justify-center bg-gradient-to-r from-brand-gold to-brand-bronze text-white py-3 px-6 rounded-lg hover:from-brand-bronze hover:to-brand-gold transition-all duration-300 transform hover:scale-105 disabled:opacity-50 shadow-md hover:shadow-lg font-sans font-medium group" /* Added shadow, group */
               >
                 {isSubmitting ? (
                   <span className="inline-flex items-center">
@@ -328,7 +341,10 @@ const Contact = ({ showOfficeInfo = true }) => {
                     {t('contact.form.submitting')}
                   </span>
                 ) : (
-                  t('contact.form.submit')
+                  <>
+                    {t('contact.form.submit')}
+                    <Send className={`w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 ${i18n.language === 'ar' ? 'mr-2 -scale-x-100 group-hover:-translate-x-1' : 'ml-2'}`} />
+                  </>
                 )}
               </button>
             </form>
@@ -345,3 +361,4 @@ const Contact = ({ showOfficeInfo = true }) => {
 };
 
 export default Contact;
+

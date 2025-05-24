@@ -6,7 +6,8 @@ import {
   HandshakeIcon, 
   Building2, 
   FileText, 
-  PackageOpen 
+  PackageOpen, 
+  ArrowRight // Added for the button
 } from 'lucide-react';
 
 const iconMap = {
@@ -19,7 +20,7 @@ const iconMap = {
 };
 
 const CoreServices = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation(); // Added i18n for RTL check
   
   const services = t('hero.slides', { returnObjects: true }) as Array<{
     title: string;
@@ -32,16 +33,19 @@ const CoreServices = () => {
     return null;
   }
 
+  // Assuming the first 3 slides correspond to the core services shown here
   const coreServices = services.slice(0, 3);
 
   return (
-    <section id="services" className="py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className="py-20 bg-gray-50"> {/* Added subtle background */}
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          {/* Apply heading font */}
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
             {t('services.title')}
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          {/* Apply sans font */}
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto font-sans">
             {t('services.subtitle')}
           </p>
         </div>
@@ -57,17 +61,19 @@ const CoreServices = () => {
               <Link
                 key={serviceId}
                 to={`/services/${serviceId}`}
-                className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden"
+                className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-1" /* Enhanced shadow & hover */
               >
-                <div className="p-6">
-                  <div className="w-14 h-14 bg-gradient-to-r from-brand-gold to-brand-bronze rounded-lg flex items-center justify-center mb-6">
+                <div className="p-8"> {/* Increased padding */}
+                  <div className="w-16 h-16 bg-gradient-to-br from-brand-gold to-brand-bronze rounded-lg flex items-center justify-center mb-6 shadow-md"> {/* Gradient direction & shadow */}
                     <ServiceIcon className="h-8 w-8 text-white" />
                   </div>
 
-                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-brand-gold transition-colors">
+                  {/* Apply heading font */}
+                  <h3 className="text-xl font-heading font-bold text-gray-900 mb-3 group-hover:text-brand-gold transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600">
+                  {/* Apply sans font */}
+                  <p className="text-gray-600 font-sans text-base"> {/* Explicit font size */}
                     {service.description}
                   </p>
                 </div>
@@ -76,25 +82,15 @@ const CoreServices = () => {
           })}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-16"> {/* Increased margin */}
           <Link
             to="/services"
-            className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-brand-gold to-brand-bronze hover:from-brand-bronze hover:to-brand-gold transition-all duration-300 transform hover:scale-105"
+            className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-gradient-to-r from-brand-gold to-brand-bronze hover:from-brand-bronze hover:to-brand-gold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl group" /* Added shadow & group */
           >
             {t('services.viewAll')}
-            <svg
-              className="ml-2 -mr-1 w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M13 7l5 5m0 0l-5 5m5-5H6"
-              />
-            </svg>
+            <ArrowRight 
+              className={`w-5 h-5 transition-transform duration-300 group-hover:translate-x-1 ${i18n.language === 'ar' ? 'mr-2 -scale-x-100 group-hover:-translate-x-1' : 'ml-2'}`} /* RTL support & animation */
+            />
           </Link>
         </div>
       </div>
@@ -103,3 +99,4 @@ const CoreServices = () => {
 };
 
 export default CoreServices;
+

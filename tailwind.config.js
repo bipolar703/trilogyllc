@@ -1,8 +1,14 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx,css}'],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+        heading: ['Montserrat', ...defaultTheme.fontFamily.sans],
+      },
       colors: {
         brand: {
           yellow: '#F2EA79',
@@ -40,3 +46,4 @@ export default {
   },
   plugins: [],
 };
+

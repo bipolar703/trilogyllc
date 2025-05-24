@@ -13,56 +13,66 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-20 bg-white"> {/* Changed background back to white for contrast */}
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          {/* Apply heading font */}
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
             {t('about.title')}
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          {/* Apply sans font */}
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto font-sans">
             {t('about.subtitle')}
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
+            {/* Apply heading font */}
+            <h3 className="text-2xl font-heading font-bold text-gray-900 mb-6">
               {t('about.whoWeAre.title')}
             </h3>
-            <p className="text-gray-600 mb-8">
+            {/* Apply sans font */}
+            <p className="text-gray-600 mb-8 font-sans text-base leading-relaxed"> {/* Added leading */}
               {t('about.whoWeAre.description')}
             </p>
 
-            <div className="space-y-4">
+            <div className="space-y-6"> {/* Increased spacing */}
               <div className="flex items-start">
-                <CheckCircle2 className="h-6 w-6 text-brand-gold mr-3 flex-shrink-0 mt-1" />
+                <CheckCircle2 className="h-6 w-6 text-brand-gold mr-4 flex-shrink-0 mt-1" /> {/* Increased margin */}
                 <div>
-                  <h4 className="font-semibold text-gray-900">
+                  {/* Apply heading font */}
+                  <h4 className="font-heading font-semibold text-gray-900">
                     {t('about.features.globalReach.title')}
                   </h4>
-                  <p className="text-gray-600">
+                  {/* Apply sans font */}
+                  <p className="text-gray-600 font-sans text-sm"> {/* Adjusted size */}
                     {t('about.features.globalReach.description')}
                   </p>
                 </div>
               </div>
               <div className="flex items-start">
-                <CheckCircle2 className="h-6 w-6 text-brand-gold mr-3 flex-shrink-0 mt-1" />
+                <CheckCircle2 className="h-6 w-6 text-brand-gold mr-4 flex-shrink-0 mt-1" />
                 <div>
-                  <h4 className="font-semibold text-gray-900">
+                  {/* Apply heading font */}
+                  <h4 className="font-heading font-semibold text-gray-900">
                     {t('about.features.expertTeam.title')}
                   </h4>
-                  <p className="text-gray-600">
+                  {/* Apply sans font */}
+                  <p className="text-gray-600 font-sans text-sm">
                     {t('about.features.expertTeam.description')}
                   </p>
                 </div>
               </div>
               <div className="flex items-start">
-                <CheckCircle2 className="h-6 w-6 text-brand-gold mr-3 flex-shrink-0 mt-1" />
+                <CheckCircle2 className="h-6 w-6 text-brand-gold mr-4 flex-shrink-0 mt-1" />
                 <div>
-                  <h4 className="font-semibold text-gray-900">
+                  {/* Apply heading font */}
+                  <h4 className="font-heading font-semibold text-gray-900">
                     {t('about.features.customSolutions.title')}
                   </h4>
-                  <p className="text-gray-600">
+                  {/* Apply sans font */}
+                  <p className="text-gray-600 font-sans text-sm">
                     {t('about.features.customSolutions.description')}
                   </p>
                 </div>
@@ -70,6 +80,7 @@ const About = () => {
             </div>
           </div>
 
+          {/* Cards section - GlowCard styling will be handled separately if needed */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {cards.map((card, index) => (
               <GlowCard
@@ -87,3 +98,4 @@ const About = () => {
 };
 
 export default About;
+

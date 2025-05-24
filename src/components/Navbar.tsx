@@ -77,7 +77,7 @@ const Navbar = () => {
 
   return (
     <nav className={navClasses}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10"> {/* Increased padding slightly */}
         <div className={`flex items-center justify-between h-16 ${currentLang === 'ar' ? 'flex-row-reverse' : ''}`}>
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -101,9 +101,9 @@ const Navbar = () => {
                   to={item.path}
                   onClick={(e) => handleNavigation(e, item.path)}
                   className={`
-                    text-base font-medium capitalize transition-colors duration-200
-                    ${scrolled ? 'text-gray-600 hover:text-brand-gold' : 'text-white hover:text-brand-gold'}
-                    ${location.pathname === item.path ? 'text-brand-gold' : ''}
+                    text-base font-sans font-medium capitalize transition-colors duration-200
+                    ${scrolled ? 'text-gray-700 hover:text-brand-gold' : 'text-white hover:text-brand-gold/90'} {/* Adjusted scrolled text color */}
+                    ${location.pathname === item.path || (item.path.startsWith('/#') && location.hash === item.path.substring(1)) ? 'text-brand-gold' : ''} {/* Improved active state check */}
                   `}
                 >
                   {t(item.messageId)}
@@ -121,7 +121,7 @@ const Navbar = () => {
               onClick={() => setIsOpen(!isOpen)}
               className={`
                 inline-flex items-center justify-center p-2 rounded-md
-                ${scrolled ? 'text-gray-400 hover:text-brand-gold hover:bg-gray-100' : 'text-white hover:text-brand-gold'}
+                ${scrolled ? 'text-gray-500 hover:text-brand-gold hover:bg-gray-100' : 'text-white hover:text-brand-gold/90'}
                 focus:outline-none transition duration-150 ease-in-out
               `}
               aria-label={isOpen ? 'Close menu' : 'Open menu'}
@@ -140,7 +140,7 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden">
           <div className={`
-            px-4 pt-2 pb-3 space-y-1 bg-white/90 backdrop-blur-md shadow-sm
+            px-4 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-md shadow-lg {/* Adjusted background */}
             ${currentLang === 'ar' ? 'text-right' : 'text-left'}
           `}>
             {navItems.map((item) => (
@@ -148,8 +148,8 @@ const Navbar = () => {
                 key={item.id}
                 to={item.path}
                 className={`
-                  block py-2 px-3 rounded-md text-base font-medium
-                  ${location.pathname === item.path ? 'text-brand-gold bg-gray-50' : 'text-gray-600'}
+                  block py-2 px-3 rounded-md text-base font-sans
+                  ${location.pathname === item.path || (item.path.startsWith('/#') && location.hash === item.path.substring(1)) ? 'text-brand-gold bg-gray-100 font-medium' : 'text-gray-700 font-normal'} {/* Adjusted colors/weights */}
                   hover:text-brand-gold hover:bg-gray-50
                 `}
                 onClick={(e) => {
@@ -171,3 +171,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

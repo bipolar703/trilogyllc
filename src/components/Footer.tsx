@@ -22,14 +22,14 @@ const Footer = () => {
         }
       } else {
         // If we're on another page, navigate to home and then scroll
-        window.location.href = path;
+        window.location.href = path; // Consider using navigate from react-router-dom for SPA behavior
       }
     }
   };
 
   return (
-    <footer className="bg-gradient-to-b from-gray-900 via-gray-900 to-black text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <footer className="bg-gradient-to-b from-gray-900 via-gray-900 to-black text-white font-sans"> {/* Applied base font */}
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Logo and Description */}
           <div className="col-span-1 md:col-span-2">
@@ -40,7 +40,7 @@ const Footer = () => {
                 className="h-12"
               />
             </Link>
-            <p className="text-gray-400 mb-6">
+            <p className="text-gray-400 mb-6 text-sm leading-relaxed"> {/* Adjusted size/leading */}
               {t('footer.company.description')}
             </p>
             <div className="space-y-4">
@@ -78,18 +78,18 @@ const Footer = () => {
               }).map(([key, item]) => (
                 <div
                   key={key}
-                  className={`flex items-center text-gray-400 ${
-                    currentLang === 'ar' ? 'flex-row-reverse justify-end' : 'flex-row justify-start'
-                  }`}
+                  className={`flex items-center text-gray-400 text-sm ${ /* Adjusted size */}
+                    ${currentLang === 'ar' ? 'flex-row-reverse justify-end' : 'flex-row justify-start'}
+                  `}
                 >
                   {currentLang === 'ar' ? (
                     <>
-                      <span>{item.content}</span>
-                      <span className="h-5 w-5 text-brand-gold mr-3 ml-4">{item.icon}</span>
+                      <span className="flex-grow text-right">{item.content}</span> {/* Ensure content takes space */}
+                      <span className="h-5 w-5 text-brand-gold mr-3 ml-4 flex-shrink-0">{item.icon}</span> {/* Added flex-shrink-0 */}
                     </>
                   ) : (
                     <>
-                      <span className="h-5 w-5 text-brand-gold mr-3">{item.icon}</span>
+                      <span className="h-5 w-5 text-brand-gold mr-3 flex-shrink-0">{item.icon}</span>
                       <span>{item.content}</span>
                     </>
                   )}
@@ -100,7 +100,8 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 bg-gradient-to-r from-brand-gold to-brand-bronze bg-clip-text text-transparent">
+            {/* Apply heading font */}
+            <h3 className="text-lg font-heading font-semibold mb-6 bg-gradient-to-r from-brand-gold to-brand-bronze bg-clip-text text-transparent">
               {t('footer.quickLinks.title')}
             </h3>
             <ul className="space-y-3">
@@ -109,7 +110,7 @@ const Footer = () => {
                   <Link
                     to={item.path}
                     onClick={(e) => handleNavigation(e, item.path)}
-                    className="text-gray-400 hover:text-brand-gold transition-colors"
+                    className="text-gray-400 hover:text-brand-gold transition-colors text-sm" /* Adjusted size */
                   >
                     {item.text}
                   </Link>
@@ -120,7 +121,8 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 bg-gradient-to-r from-brand-gold to-brand-bronze bg-clip-text text-transparent">
+            {/* Apply heading font */}
+            <h3 className="text-lg font-heading font-semibold mb-6 bg-gradient-to-r from-brand-gold to-brand-bronze bg-clip-text text-transparent">
               {t('footer.services.title')}
             </h3>
             <ul className="space-y-3">
@@ -128,9 +130,9 @@ const Footer = () => {
                 <li key={key}>
                   <Link
                     to={item.path}
-                    className={`text-gray-400 hover:text-brand-gold transition-colors ${
-                      key === 'viewAll' ? 'text-brand-gold hover:text-brand-bronze font-medium' : ''
-                    }`}
+                    className={`text-gray-400 hover:text-brand-gold transition-colors text-sm ${ /* Adjusted size */}
+                      ${key === 'viewAll' ? 'text-brand-gold hover:text-brand-bronze font-medium' : ''}
+                    `}
                   >
                     {item.text}
                   </Link>
@@ -140,9 +142,9 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-xs"> {/* Adjusted size/color */}
           <p>
-            {currentLang === 'ar' 
+            {currentLang === 'ar'
               ? "تم التصميم والتطوير بواسطة شركة الصبّار للدعاية والإعلان © الشركة الثلاثية للتوريد والوكالات التجارية ذ.م.م - جميع الحقوق محفوظة"
               : "Designed and Developed by Cactus Media © Trilogy Trading LLC. - All Rights Reserved"
             }
@@ -154,3 +156,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

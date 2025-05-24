@@ -59,7 +59,7 @@ const Hero = () => {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
               currentSlide === index ? 'opacity-100' : 'opacity-0'
             }`}
           >
@@ -76,12 +76,14 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-20 h-full flex items-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 w-full">
           <div className="text-center text-white">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 transition-all duration-500 transform">
+            {/* Apply heading font */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold mb-4 sm:mb-6 transition-all duration-500 transform">
               {slides[currentSlide].title}
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 text-brand-yellow">
+            {/* Apply sans font explicitly for clarity */}
+            <p className="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 text-brand-yellow font-sans">
               {slides[currentSlide].description}
             </p>
             <Link
@@ -105,7 +107,7 @@ const Hero = () => {
       <div className="hidden md:block">
         <button
           onClick={() => handleManualNavigation(prevSlide)}
-          className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-30 p-1 sm:p-2 rounded-full bg-brand-gold/20 text-white hover:bg-brand-gold transition-all duration-200"
+          className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-30 p-1 sm:p-2 rounded-full bg-brand-gold/30 text-white hover:bg-brand-gold/50 transition-all duration-200" /* Adjusted opacity */
           aria-label="Previous slide"
           title="View previous slide"
         >
@@ -113,7 +115,7 @@ const Hero = () => {
         </button>
         <button
           onClick={() => handleManualNavigation(nextSlide)}
-          className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-30 p-1 sm:p-2 rounded-full bg-brand-gold/20 text-white hover:bg-brand-gold transition-all duration-200"
+          className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-30 p-1 sm:p-2 rounded-full bg-brand-gold/30 text-white hover:bg-brand-gold/50 transition-all duration-200" /* Adjusted opacity */
           aria-label="Next slide"
           title="View next slide"
         >
@@ -134,10 +136,10 @@ const Hero = () => {
             key={index}
             onClick={() => handleManualNavigation(() => setCurrentSlide(index))}
             className={`
-              h-2 sm:h-3 rounded-full transition-all duration-300
+              h-2 sm:h-3 rounded-full transition-all duration-300 ease-in-out
               ${currentSlide === index 
                 ? 'bg-brand-gold w-6 sm:w-8' 
-                : 'bg-white/50 hover:bg-white w-2 sm:w-3'
+                : 'bg-white/60 hover:bg-white/80 w-2 sm:w-3'
               }
             `}
             aria-label={`Go to slide ${index + 1}: ${slide.title}`}
@@ -150,3 +152,4 @@ const Hero = () => {
 };
 
 export default Hero;
+

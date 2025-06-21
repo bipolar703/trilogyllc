@@ -1,0 +1,96 @@
+{
+  "company_profile": {
+    "name": "Trilogy Trading LLC",
+    "established": "2009",
+    "industry": "Global Trade & Supply Chain Solutions",
+    "headquarters": {
+      "address": "Wasfi Al Tal Street, Amman, Jordan",
+      "timezone": "GMT+3"
+    },
+    "operational_reach": "30+ Countries",
+    "client_base": "500+ Global Businesses",
+    "experience": "15+ Years"
+  },
+  "contact_information": {
+    "phones": ["+962 79 687 2273", "+962 79 6564 791"],
+    "email": "info@trilogytradingllc.com",
+    "whatsapp": "+962 79 687 2273",
+    "business_hours": {
+      "weekdays": "Sunday-Thursday: 8:00 AM - 6:00 PM (GMT+3)",
+      "weekend": "Friday-Saturday: Closed"
+    }
+  },
+  "services": {
+    "strategic_product_sourcing": {
+      "description": "Global supplier identification & vetting",
+      "features": [
+        "Global supplier identification & vetting",
+        "Market price benchmarking",
+        "Quality assurance protocols",
+        "Contract negotiation support"
+      ]
+    },
+    "logistics_optimization": {
+      "description": "End-to-end supply chain management",
+      "features": [
+        "End-to-end supply chain management",
+        "Multimodal transportation solutions",
+        "Inventory management systems",
+        "Customs compliance assurance"
+      ]
+    },
+    "trade_documentation": {
+      "description": "Export/import documentation preparation",
+      "features": [
+        "Export/import documentation preparation",
+        "Certificate of Origin processing",
+        "Customs clearance assistance",
+        "Regulatory compliance checks"
+      ]
+    },
+    "b2b_trade_solutions": {
+      "description": "International market entry strategies",
+      "features": [
+        "International market entry strategies",
+        "Trade partnership facilitation",
+        "Commercial dispute resolution",
+        "Risk management consulting"
+      ]
+    }
+  },
+  "certifications": [
+    "ISO 9001:2015 Certified",
+    "FIATA Accredited",
+    "Jordan Chamber of Commerce Member"
+  ],
+  "value_proposition": "Your strategic partner in navigating global markets, optimizing supply chains, and securing competitive trade advantages",
+  "quality_assurance": [
+    "100% Compliance Guarantee",
+    "Real-Time Shipment Tracking",
+    "Dedicated Account Managers",
+    "Quarterly Performance Reviews"
+  ],
+  "success_metrics": {
+    "textile_case": {
+      "cost_reduction": "35%",
+      "delivery_timeline": "15 days",
+      "monthly_shipments": "50+"
+    },
+    "tech_startup_case": {
+      "market_entry_time": "3 months",
+      "supplier_terms_improvement": "20%",
+      "customs_clearance_reduction": "40%"
+    }
+  },
+  "common_queries": {
+    "pricing": "Contact for customized quotes based on specific requirements",
+    "timeline": "Varies by service - typically 3-15 days for documentation, 15-30 days for sourcing",
+    "coverage": "30+ countries with focus on Asia-Europe-Middle East trade corridors",
+    "minimum_order": "No minimum - services scaled to client needs"
+  },
+  "bot_responses": {
+    "greeting": "Hello! I'm here to help you with Trilogy Trading LLC's global trade and supply chain solutions. How can I assist you today?",
+    "services_overview": "We offer four main services: Strategic Product Sourcing, Logistics Optimization, Trade Documentation, and B2B Trade Solutions. Which area interests you most?",
+    "contact_escalation": "For detailed discussions, please contact us at +962 79 687 2273 or info@trilogytradingllc.com. Our team is available Sunday-Thursday, 8 AM-6 PM (GMT+3)."
+  }
+}

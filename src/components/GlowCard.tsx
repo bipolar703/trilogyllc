@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 interface GlowCardProps {
   title: string;
@@ -7,34 +7,54 @@ interface GlowCardProps {
   colorIndex: number;
 }
 
-const GlowCard: React.FC<GlowCardProps> = ({ title, description, colorIndex }) => {
+const GlowCard: React.FC<GlowCardProps> = ({
+  title,
+  description,
+  colorIndex,
+}) => {
   // Generate random animation duration between 4 and 7 seconds
   const duration = 4 + Math.random() * 3;
   // Randomly decide animation direction
   const isReverse = Math.random() > 0.5;
 
   return (
-    <StyledWrapper colorIndex={colorIndex} duration={duration} reverse={isReverse}>
-      <div className="card">
-        <div className="bg">
-          <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
-          <p className="text-gray-600 text-sm">{description}</p>
+    <StyledWrapper
+      colorIndex={colorIndex}
+      duration={duration}
+      reverse={isReverse}
+      data-oid="1jaelfw"
+    >
+      <div className="card" data-oid="iixl.kh">
+        <div className="bg" data-oid="3m05it:">
+          <h3
+            className="text-xl font-bold text-gray-900 mb-2"
+            data-oid=".i7srdn"
+          >
+            {title}
+          </h3>
+          <p className="text-gray-600 text-sm" data-oid="12o0dhb">
+            {description}
+          </p>
         </div>
-        <div className="blob" />
+        <div className="blob" data-oid="xat56iw" />
       </div>
     </StyledWrapper>
   );
-}
+};
 
 const gradients = [
-  'linear-gradient(135deg, #F2EA79, #D9981E)',
-  'linear-gradient(135deg, #D9981E, #A67E33)',
-  'linear-gradient(135deg, #A67E33, #F2EA79)',
-  'linear-gradient(135deg, #F2EA79, #A67E33)',
-  'linear-gradient(135deg, #D9981E, #F2EA79)'
+  "linear-gradient(135deg, #F2EA79, #D9981E)",
+  "linear-gradient(135deg, #D9981E, #A67E33)",
+  "linear-gradient(135deg, #A67E33, #F2EA79)",
+  "linear-gradient(135deg, #F2EA79, #A67E33)",
+  "linear-gradient(135deg, #D9981E, #F2EA79)",
 ];
 
-const StyledWrapper = styled.div<{ colorIndex: number; duration: number; reverse: boolean }>`
+const StyledWrapper = styled.div<{
+  colorIndex: number;
+  duration: number;
+  reverse: boolean;
+}>`
   .card {
     position: relative;
     width: 100%;
@@ -46,7 +66,9 @@ const StyledWrapper = styled.div<{ colorIndex: number; duration: number; reverse
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+    box-shadow:
+      20px 20px 60px #bebebe,
+      -20px -20px 60px #ffffff;
 
     @media (max-width: 640px) {
       height: 180px;
@@ -60,7 +82,7 @@ const StyledWrapper = styled.div<{ colorIndex: number; duration: number; reverse
     right: 5px;
     bottom: 5px;
     z-index: 2;
-    background: rgba(255, 255, 255, .95);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(24px);
     border-radius: 10px;
     overflow: hidden;
@@ -97,11 +119,12 @@ const StyledWrapper = styled.div<{ colorIndex: number; duration: number; reverse
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background: ${props => gradients[props.colorIndex]};
+    background: ${(props) => gradients[props.colorIndex]};
     opacity: 0.8;
     filter: blur(12px);
-    animation: blob-bounce-${props => props.reverse ? 'reverse' : 'normal'} ${props => props.duration}s infinite ease;
-    animation-direction: ${props => props.reverse ? 'reverse' : 'normal'};
+    animation: blob-bounce-${(props) => (props.reverse ? "reverse" : "normal")}
+      ${(props) => props.duration}s infinite ease;
+    animation-direction: ${(props) => (props.reverse ? "reverse" : "normal")};
 
     @media (max-width: 640px) {
       width: 120px;
@@ -146,4 +169,4 @@ const StyledWrapper = styled.div<{ colorIndex: number; duration: number; reverse
   }
 `;
 
-export default GlowCard; 
+export default GlowCard;

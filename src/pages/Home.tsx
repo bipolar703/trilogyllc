@@ -1,10 +1,10 @@
-import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import Hero from '../components/Hero';
-import Services from '../components/Services';
-import About from '../components/About';
-import Contact from '../components/Contact';
-import AnimationObserver from '../components/AnimationObserver';
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import Hero from "../components/Hero";
+import Services from "../components/Services";
+import About from "../components/About";
+import Contact from "../components/Contact";
+import AnimationObserver from "../components/AnimationObserver";
 
 const Home = () => {
   const location = useLocation();
@@ -18,16 +18,17 @@ const Home = () => {
         if (element) {
           // Clear any existing timeout
           if (scrollTimeout) clearTimeout(scrollTimeout);
-          
+
           // Wait for content to load and then scroll
           scrollTimeout = setTimeout(() => {
             const headerOffset = 80; // Adjust based on your header height
             const elementPosition = element.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            const offsetPosition =
+              elementPosition + window.pageYOffset - headerOffset;
 
             window.scrollTo({
               top: offsetPosition,
-              behavior: 'smooth'
+              behavior: "smooth",
             });
 
             // Clean up the state after successful scroll
@@ -47,16 +48,16 @@ const Home = () => {
   }, [location]);
 
   return (
-    <main>
-      <Hero />
-      <AnimationObserver>
-        <Services />
+    <main data-oid=":0nbpeh">
+      <Hero data-oid="p-w2.b8" />
+      <AnimationObserver data-oid="8ccp:79">
+        <Services data-oid="_-di6bd" />
       </AnimationObserver>
-      <AnimationObserver>
-        <About />
+      <AnimationObserver data-oid="o16ea90">
+        <About data-oid="bzo6ouy" />
       </AnimationObserver>
-      <AnimationObserver>
-        <Contact />
+      <AnimationObserver data-oid="ftk4:d4">
+        <Contact data-oid="q4ved_p" />
       </AnimationObserver>
     </main>
   );

@@ -1,0 +1,296 @@
+/* Products Page Styles */
+
+.headerBackground {
+  background: linear-gradient(135deg, 
+    rgba(212, 175, 55, 0.1) 0%, 
+    rgba(184, 134, 11, 0.1) 50%, 
+    rgba(146, 64, 14, 0.1) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.headerBackground::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(184, 134, 11, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(146, 64, 14, 0.05) 0%, transparent 50%);
+  animation: float 20s ease-in-out infinite;
+}
+
+.gradientText {
+  background: linear-gradient(135deg, #d4af37 0%, #b8860b 50%, #92400e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+.subtleText {
+  color: #6b7280;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Animation for floating background elements */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-20px) rotate(1deg);
+  }
+  66% {
+    transform: translateY(10px) rotate(-1deg);
+  }
+}
+
+/* Product category cards */
+.categoryCard {
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.categoryCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-color: rgba(212, 175, 55, 0.2);
+}
+
+/* Product item cards */
+.productCard {
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.productCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.productCard:hover::before {
+  left: 100%;
+}
+
+.productCard:hover {
+  border-color: #d4af37;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.15);
+}
+
+/* Search and filter inputs */
+.searchInput {
+  transition: all 0.2s ease;
+}
+
+.searchInput:focus {
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+/* Feature tags */
+.featureTag {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(184, 134, 11, 0.1));
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: all 0.2s ease;
+}
+
+.featureTag:hover {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(184, 134, 11, 0.2));
+  transform: translateY(-1px);
+}
+
+/* Stats section */
+.statsSection {
+  background: linear-gradient(135deg, #d4af37 0%, #b8860b 50%, #92400e 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.statsSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+}
+
+/* Capability cards */
+.capabilityCard {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.capabilityCard::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(184, 134, 11, 0.05));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.capabilityCard:hover::after {
+  opacity: 1;
+}
+
+.capabilityCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* CTA Section */
+.ctaSection {
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 1) 0%, 
+    rgba(249, 250, 251, 1) 100%
+  );
+  border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+/* Button animations */
+.primaryButton {
+  background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.primaryButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.primaryButton:hover::before {
+  left: 100%;
+}
+
+.primaryButton:hover {
+  background: linear-gradient(135deg, #b8860b 0%, #92400e 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+}
+
+.secondaryButton {
+  border: 2px solid #d4af37;
+  color: #d4af37;
+  transition: all 0.3s ease;
+}
+
+.secondaryButton:hover {
+  background: #d4af37;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .headerBackground {
+    padding: 3rem 0;
+  }
+  
+  .gradientText {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+  .categoryCard {
+    margin-bottom: 1rem;
+  }
+  
+  .productCard {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* RTL Support */
+[dir="rtl"] .searchInput {
+  padding-left: 1rem;
+  padding-right: 2.5rem;
+}
+
+[dir="rtl"] .searchInput + .searchIcon {
+  left: auto;
+  right: 0.75rem;
+}
+
+/* Dark mode support (if needed) */
+@media (prefers-color-scheme: dark) {
+  .headerBackground {
+    background: linear-gradient(135deg, 
+      rgba(212, 175, 55, 0.05) 0%, 
+      rgba(184, 134, 11, 0.05) 50%, 
+      rgba(146, 64, 14, 0.05) 100%
+    );
+  }
+}
+
+/* Loading states */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.loadingSpinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Accessibility improvements */
+.focusVisible:focus-visible {
+  outline: 2px solid #d4af37;
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .headerBackground {
+    background: none !important;
+    color: black !important;
+  }
+  
+  .gradientText {
+    -webkit-text-fill-color: black !important;
+    color: black !important;
+  }
+  
+  .primaryButton,
+  .secondaryButton {
+    background: white !important;
+    color: black !important;
+    border: 1px solid black !important;
+  }
+}

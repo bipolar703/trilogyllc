@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from "react";
 
 interface AnimationObserverProps {
   children: React.ReactNode;
@@ -10,10 +10,10 @@ interface AnimationObserverProps {
 
 const AnimationObserver: React.FC<AnimationObserverProps> = ({
   children,
-  className = '',
+  className = "",
   threshold = 0.1,
-  rootMargin = '0px 0px -50px 0px',
-  triggerOnce = true
+  rootMargin = "0px 0px -50px 0px",
+  triggerOnce = true,
 }) => {
   const elementRef = useRef<HTMLDivElement>(null);
 
@@ -25,13 +25,13 @@ const AnimationObserver: React.FC<AnimationObserverProps> = ({
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            
+            entry.target.classList.add("revealed");
+
             // Add stagger animation to children
-            const staggerItems = entry.target.querySelectorAll('.stagger-item');
+            const staggerItems = entry.target.querySelectorAll(".stagger-item");
             staggerItems.forEach((item, index) => {
               setTimeout(() => {
-                item.classList.add('revealed');
+                item.classList.add("revealed");
               }, index * 100);
             });
 
@@ -39,20 +39,20 @@ const AnimationObserver: React.FC<AnimationObserverProps> = ({
               observer.unobserve(entry.target);
             }
           } else if (!triggerOnce) {
-            entry.target.classList.remove('revealed');
-            
+            entry.target.classList.remove("revealed");
+
             // Remove stagger animation from children
-            const staggerItems = entry.target.querySelectorAll('.stagger-item');
+            const staggerItems = entry.target.querySelectorAll(".stagger-item");
             staggerItems.forEach((item) => {
-              item.classList.remove('revealed');
+              item.classList.remove("revealed");
             });
           }
         });
       },
       {
         threshold,
-        rootMargin
-      }
+        rootMargin,
+      },
     );
 
     observer.observe(element);
@@ -65,10 +65,7 @@ const AnimationObserver: React.FC<AnimationObserverProps> = ({
   }, [threshold, rootMargin, triggerOnce]);
 
   return (
-    <div
-      ref={elementRef}
-      className={`reveal ${className}`}
-    >
+    <div ref={elementRef} className={`reveal ${className}`} data-oid="0a70xe7">
       {children}
     </div>
   );

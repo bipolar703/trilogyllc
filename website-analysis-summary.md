@@ -109,7 +109,7 @@ const entities = {
   "responses": {
     "greeting": "Hello! I'm here to help with Trilogy Trading's global trade solutions...",
     "service_overview": "We offer 4 main services: Strategic Product Sourcing...",
-    "escalation": "Let me connect you with our expert team at +962 79 687 2273..."
+    "escalation": "Let me connect you with our expert team at +962796564791..."
   }
 }
 ```

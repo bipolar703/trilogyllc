@@ -573,7 +573,7 @@ export default function BlogPage() {
             </Link>
             <Button variant="outline">
               <Phone className="h-4 w-4 mr-2" />
-              Call +962 79 687 2273
+              Call +962796564791
             </Button>
           </div>
         </div>

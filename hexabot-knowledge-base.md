@@ -30,13 +30,13 @@
 "Our B2B solutions help you enter new markets and build trade partnerships. We've helped companies enter EU markets in as little as 3 months. Which market are you looking to enter?"
 
 ## Contact Information & Escalation
-- **Phones:** +962 79 687 2273 | +962 79 6564 791
+- **Phones:** +962796564791
 - **Email:** info@trilogytradingllc.com
-- **WhatsApp:** +962 79 687 2273
+- **WhatsApp:** +962796564791
 - **Hours:** Sunday-Thursday: 8:00 AM - 6:00 PM (GMT+3)
 
 **Escalation Template:**
-"For detailed discussions about your specific needs, I'll connect you with our expert team. You can reach us at +962 79 687 2273 or info@trilogytradingllc.com. We're available Sunday-Thursday, 8 AM-6 PM (GMT+3)."
+"For detailed discussions about your specific needs, I'll connect you with our expert team. You can reach us at +962796564791 or info@trilogytradingllc.com. We're available Sunday-Thursday, 8 AM-6 PM (GMT+3)."
 
 ## Common Customer Queries & Responses
 

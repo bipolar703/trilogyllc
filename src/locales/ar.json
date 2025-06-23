@@ -750,7 +750,7 @@
         "city": "عمان",
         "country": "الأردن",
         "poBox": "ص.ب: 123456",
-        "phone": "+962 79 687 2273",
+        "phone": "+962796564791",
         "email": "info@trilogytradingllc.com",
         "hours": {
           "title": "ساعات العمل",
@@ -811,8 +811,8 @@
     "contact": {
       "title": "معلومات الاتصال",
       "address": "شارع وصفي التل، عمان، الأردن",
-      "phone": "+962 79 687 2273",
-      "phoneDisplay": "+962 79 687 2273",
+      "phone": "+962796564791",
+      "phoneDisplay": "+962796564791",
       "email": "info@trilogytradingllc.com"
     },
     "social": {

@@ -745,7 +745,7 @@
         "city": "Amman",
         "country": "Jordan",
         "poBox": "P.O. Box: 123456",
-        "phone": "+962 79 687 2273",
+        "phone": "+962796564791",
         "email": "info@trilogytradingllc.com",
         "hours": {
           "title": "Working Hours",
@@ -806,8 +806,8 @@
     "contact": {
       "title": "Contact Info",
       "address": "Wasfi Al Tal St., Amman, Jordan",
-      "phone": "+962 79 687 2273",
-      "phoneDisplay": "+962 79 687 2273",
+      "phone": "+962796564791",
+      "phoneDisplay": "+962796564791",
       "email": "info@trilogytradingllc.com"
     },
     "social": {

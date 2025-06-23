@@ -3,25 +3,37 @@ import { useTranslation } from 'react-i18next';
 import LiveIndicator from './LiveIndicator';
 import ChatOptions from './ChatOptions';
 import LiveChat from './LiveChat';
+import HexabotChat from './HexabotChat';
+import ChatToggle from './ChatToggle';
 
 const ChatWidget: React.FC = () => {
   const [isOptionsVisible, setIsOptionsVisible] = useState(false);
   const [isLiveChatVisible, setIsLiveChatVisible] = useState(false);
+  const [isHexabotVisible, setIsHexabotVisible] = useState(false);
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === 'ar';
 
-  const handleOptionSelect = (option: 'whatsapp' | 'live') => {
+  const handleOptionSelect = (option: 'whatsapp' | 'live' | 'hexabot') => {
     if (option === 'whatsapp') {
-      const phoneNumber = '962796872273'; // Your WhatsApp number
+      const phoneNumber = '962796564791';
       window.open(`https://wa.me/${phoneNumber}`, '_blank');
-    } else {
+    } else if (option === 'live') {
       setIsLiveChatVisible(true);
+    } else if (option === 'hexabot') {
+      setIsHexabotVisible(true);
     }
     setIsOptionsVisible(false);
   };
 
+  const handleHexabotToggle = () => {
+    setIsHexabotVisible(!isHexabotVisible);
+    setIsOptionsVisible(false);
+    setIsLiveChatVisible(false);
+  };
+
   return (
     <>
+      {/* Main Chat Widget */}
       <div 
         className={`fixed ${isRTL ? 'left-4 sm:left-6' : 'right-4 sm:right-6'} bottom-4 sm:bottom-6 z-50 flex flex-col items-end`}
       >
@@ -30,6 +42,7 @@ const ChatWidget: React.FC = () => {
             onClick={() => {
               setIsOptionsVisible(!isOptionsVisible);
               if (isLiveChatVisible) setIsLiveChatVisible(false);
+              if (isHexabotVisible) setIsHexabotVisible(false);
             }}
             className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
             aria-label={t('chat.open')}
@@ -70,7 +83,20 @@ const ChatWidget: React.FC = () => {
         </div>
       </div>
 
+      {/* Hexabot Chat Toggle - Alternative access */}
+      {!isOptionsVisible && !isLiveChatVisible && (
+        <ChatToggle
+          isVisible={isHexabotVisible}
+          onClick={handleHexabotToggle}
+        />
+      )}
+
+      {/* Chat Components */}
       <LiveChat isVisible={isLiveChatVisible} />
+      <HexabotChat 
+        isVisible={isHexabotVisible} 
+        onClose={() => setIsHexabotVisible(false)} 
+      />
     </>
   );
 };

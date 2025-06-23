@@ -1,0 +1,518 @@
+/* About Section */
+.aboutSection {
+  position: relative;
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #f5f5f5 100%);
+  overflow: hidden;
+}
+
+/* Background Elements */
+.backgroundElements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.gradientMesh1 {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: meshFloat1 20s ease-in-out infinite;
+  filter: blur(40px);
+}
+
+.gradientMesh2 {
+  position: absolute;
+  top: 60%;
+  right: 15%;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: meshFloat2 25s ease-in-out infinite;
+  filter: blur(30px);
+}
+
+.gradientMesh3 {
+  position: absolute;
+  bottom: 20%;
+  left: 60%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.06) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: meshFloat3 30s ease-in-out infinite;
+  filter: blur(50px);
+}
+
+@keyframes meshFloat1 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(40px, -30px) rotate(120deg); }
+  66% { transform: translate(-20px, 20px) rotate(240deg); }
+}
+
+@keyframes meshFloat2 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-50px, -40px) rotate(180deg); }
+}
+
+@keyframes meshFloat3 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(30px, -20px) rotate(90deg); }
+  50% { transform: translate(-25px, -30px) rotate(180deg); }
+  75% { transform: translate(-35px, 15px) rotate(270deg); }
+}
+
+/* Header Section */
+.headerSection {
+  position: relative;
+  z-index: 10;
+}
+
+.premiumBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 50px;
+  color: #2563eb;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+  animation: badgeGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes badgeGlow {
+  0% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.2); }
+  100% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.4); }
+}
+
+.sectionTitle {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.titleGradient {
+  background: linear-gradient(135deg, #1a1a1a 0%, #333333 25%, #2563eb 50%, #333333 75%, #1a1a1a 100%);
+  background-size: 300% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: titleGradientMove 4s ease-in-out infinite;
+}
+
+@keyframes titleGradientMove {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.sectionSubtitle {
+  font-size: 1.25rem;
+  color: #666666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Achievements Section */
+.achievementsSection {
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 10;
+}
+
+.achievementsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.achievementCard {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.achievementCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.achievementIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  color: white;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.iconblue {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+
+.icongreen {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.iconpurple {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+.iconorange {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.achievementContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.achievementValue {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.achievementLabel {
+  font-size: 0.875rem;
+  color: #666666;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.achievementGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 20px;
+}
+
+.achievementCard:hover .achievementGlow {
+  opacity: 1;
+}
+
+/* Main Content */
+.mainContent {
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 10;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.textContent {
+  position: relative;
+}
+
+.contentCard {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  padding: 3rem;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.contentTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+.contentDescription {
+  font-size: 1.125rem;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.featuresList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.featureItem:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transform: translateX(8px);
+}
+
+.featureIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  border-radius: 10px;
+  color: #000;
+  flex-shrink: 0;
+}
+
+.featureContent {
+  flex: 1;
+}
+
+.featureTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.25rem;
+}
+
+.featureDescription {
+  font-size: 0.875rem;
+  color: #666666;
+  line-height: 1.5;
+}
+
+.ctaContainer {
+  text-align: center;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  color: #000;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.3);
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 12px 48px rgba(255, 215, 0, 0.4);
+}
+
+/* Cards Grid */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.cardWrapper {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: cardReveal 0.6s ease-out forwards;
+}
+
+.cardWrapper:nth-child(1) { animation-delay: 0ms; }
+.cardWrapper:nth-child(2) { animation-delay: 150ms; }
+.cardWrapper:nth-child(3) { animation-delay: 300ms; }
+.cardWrapper:nth-child(4) { animation-delay: 450ms; }
+
+@keyframes cardReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Values Section */
+.valuesSection {
+  position: relative;
+  z-index: 10;
+}
+
+.valuesContainer {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 32px;
+  padding: 3rem;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.valuesTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, #1a1a1a, #2563eb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.valueItem {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.valueIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  border-radius: 16px;
+  color: white;
+  margin: 0 auto 1rem;
+  transition: all 0.3s ease;
+}
+
+.valueItem:hover .valueIcon {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 8px 32px rgba(37, 99, 235, 0.3);
+}
+
+.valueTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.valueDescription {
+  font-size: 0.875rem;
+  color: #666666;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .achievementsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutSection {
+    padding: 4rem 0;
+  }
+  
+  .achievementsGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .achievementCard {
+    padding: 1.5rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .contentCard {
+    padding: 2rem;
+  }
+  
+  .cardsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .valuesContainer {
+    padding: 2rem;
+  }
+  
+  .valuesGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .gradientMesh1,
+  .gradientMesh2,
+  .gradientMesh3 {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .contentTitle {
+    font-size: 1.5rem;
+  }
+  
+  .contentDescription {
+    font-size: 1rem;
+  }
+  
+  .featureItem {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+  
+  .valuesTitle {
+    font-size: 1.5rem;
+  }
+}

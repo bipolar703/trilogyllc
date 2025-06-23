@@ -154,7 +154,7 @@ Respond as Hexabot following all the guidelines above. Be professional, helpful,
     // Fallback response
     const responseTime = Date.now() - startTime;
     return {
-      content: "I apologize, but I'm experiencing technical difficulties. Please contact our team directly at +962 79 687 2273 or info@trilogytradingllc.com for immediate assistance. Our team is available Sunday-Thursday, 8 AM-6 PM (GMT+3).",
+      content: "I apologize, but I'm experiencing technical difficulties. Please contact our team directly at +962796564791 or info@trilogytradingllc.com for immediate assistance. Our team is available Sunday-Thursday, 8 AM-6 PM (GMT+3).",
       responseTime,
       shouldEscalate: true,
     };
@@ -169,7 +169,7 @@ function detectEscalationNeeded(response: string, userMessage: string): boolean 
     'connect you with our team',
     'speak with our specialists',
     'contact our expert team',
-    '+962 79 687 2273',
+    '+962796564791',
     'info@trilogytradingllc.com',
     'detailed consultation',
     'human expert',

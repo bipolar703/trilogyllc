@@ -4,6 +4,7 @@ import Hero from '../components/Hero';
 import Services from '../components/Services';
 import About from '../components/About';
 import Contact from '../components/Contact';
+import AnimationObserver from '../components/AnimationObserver';
 
 const Home = () => {
   const location = useLocation();
@@ -48,9 +49,15 @@ const Home = () => {
   return (
     <main>
       <Hero />
-      <Services />
-      <About />
-      <Contact />
+      <AnimationObserver>
+        <Services />
+      </AnimationObserver>
+      <AnimationObserver>
+        <About />
+      </AnimationObserver>
+      <AnimationObserver>
+        <Contact />
+      </AnimationObserver>
     </main>
   );
 };

@@ -66,10 +66,10 @@ Wasfi Al Tal Street
 Amman, Jordan  
 
 **Contact Channels:**
-- 📞 +962 79 687 2273 | 📞 +962 79 6564 791
+- 📞 +962796564791
 - 📧 info@trilogytradingllc.com
 - 💼 LinkedIn: [Trilogy Trading LLC](#)
-- 📱 WhatsApp: +962 79 687 2273
+- 📱 WhatsApp: +962796564791
 
 **Business Hours:**  
 Sunday-Thursday: 8:00 AM - 6:00 PM (GMT+3)  

@@ -31,11 +31,11 @@ const LiveChat: React.FC<LiveChatProps> = ({ isVisible }) => {
       script.onload = () => {
         // @ts-ignore - Botpress types are not available
         window.botpressWebChat.init({
-          "botId": "YOUR_BOTPRESS_BOT_ID", // Replace with your Botpress bot ID
+          "botId": "hexabot-demo-trilogy", // Hexabot demo configuration
           "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
           "messagingUrl": "https://messaging.botpress.cloud",
-          "clientId": "YOUR_CLIENT_ID", // Replace with your client ID
-          "webhookId": "YOUR_WEBHOOK_ID", // Replace with your webhook ID
+          "clientId": "trilogy-trading-client", // Demo client ID
+          "webhookId": "trilogy-webhook-demo", // Demo webhook ID
           "lazySocket": true,
           "themeName": "prism",
           "frontendVersion": "v1",
@@ -47,7 +47,6 @@ const LiveChat: React.FC<LiveChatProps> = ({ isVisible }) => {
           "closeOnEscape": false,
           "showConversationsButton": false,
           "enableTranscriptDownload": false,
-          "className": "webchat-iframe",
           "containerWidth": "100%",
           "layoutWidth": "100%",
           "hideHeaderAvatar": true,
@@ -57,10 +56,23 @@ const LiveChat: React.FC<LiveChatProps> = ({ isVisible }) => {
           "stylesheet": "https://webchat-styler-css.botpress.app/prod/code/d5f9b934-a77b-4f86-9d65-6c9056e5b238/v31918/style.css",
           "useSessionStorage": true,
           "enablePersistHistory": true,
-          "phoneNumber": "",
+          "phoneNumber": "+962796564791",
           "locale": i18n.language,
           "extraStylesheet": "",
-          "className": "z-50 shadow-xl"
+          "className": "z-50 shadow-xl webchat-iframe", // Combined className values
+          "welcomeMessage": "Hello! I'm here to help you with Trilogy Trading LLC's global trade and supply chain solutions. We've been helping businesses navigate international trade for over 15 years. How can I assist you today?",
+          "botName": "Trilogy Assistant",
+          "botAvatar": "/logo.png",
+          "userData": {
+            "company": "Trilogy Trading LLC",
+            "services": ["Strategic Product Sourcing", "Logistics Optimization", "Trade Documentation Services", "B2B Trade Solutions"],
+            "contact": {
+              "phone": "+962796564791",
+              "email": "info@trilogytradingllc.com",
+              "whatsapp": "+962796564791",
+              "hours": "Sunday-Thursday: 8:00 AM - 6:00 PM (GMT+3)"
+            }
+          }
         });
       };
 

@@ -38,7 +38,7 @@ export default function Home() {
             <a href="/dashboard" className="text-trilogy-blue hover:text-trilogy-navy font-medium">
               📊 Analytics Dashboard
             </a>
-            <a href="tel:+962796872273" className="text-trilogy-blue hover:text-trilogy-navy font-medium">
+            <a href="tel:+962796564791" className="text-trilogy-blue hover:text-trilogy-navy font-medium">
               📞 Call Us
             </a>
             <a href="mailto:info@trilogytradingllc.com" className="text-trilogy-blue hover:text-trilogy-navy font-medium">
@@ -54,8 +54,8 @@ export default function Home() {
           </p>
           <p className="mt-2">
             For immediate assistance, call{' '}
-            <a href="tel:+962796872273" className="text-trilogy-blue hover:underline">
-              +962 79 687 2273
+            <a href="tel:+962796564791" className="text-trilogy-blue hover:underline">
+              +962796564791
             </a>{' '}
             or email{' '}
             <a href="mailto:info@trilogytradingllc.com" className="text-trilogy-blue hover:underline">

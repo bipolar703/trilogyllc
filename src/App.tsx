@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import LoadingSpinner from './components/LoadingSpinner';
 import { useTranslation } from 'react-i18next';
 import ChatWidget from './components/chat/ChatWidget';
+import AnimationObserver from './components/AnimationObserver';
 
 // Enhanced ScrollToTop component with loading state
 const ScrollToTop = ({ setIsLoading }: { setIsLoading: (loading: boolean) => void }) => {

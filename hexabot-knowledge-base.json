@@ -12,9 +12,9 @@
     "experience": "15+ Years"
   },
   "contact_information": {
-    "phones": ["+962 79 687 2273", "+962 79 6564 791"],
+    "phones": ["+962796564791"],
     "email": "info@trilogytradingllc.com",
-    "whatsapp": "+962 79 687 2273",
+    "whatsapp": "+962796564791",
     "business_hours": {
       "weekdays": "Sunday-Thursday: 8:00 AM - 6:00 PM (GMT+3)",
       "weekend": "Friday-Saturday: Closed"
@@ -91,6 +91,6 @@
   "bot_responses": {
     "greeting": "Hello! I'm here to help you with Trilogy Trading LLC's global trade and supply chain solutions. How can I assist you today?",
     "services_overview": "We offer four main services: Strategic Product Sourcing, Logistics Optimization, Trade Documentation, and B2B Trade Solutions. Which area interests you most?",
-    "contact_escalation": "For detailed discussions, please contact us at +962 79 687 2273 or info@trilogytradingllc.com. Our team is available Sunday-Thursday, 8 AM-6 PM (GMT+3)."
+    "contact_escalation": "For detailed discussions, please contact us at +962796564791 or info@trilogytradingllc.com. Our team is available Sunday-Thursday, 8 AM-6 PM (GMT+3)."
   }
 }

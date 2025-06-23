@@ -217,7 +217,7 @@ Current message: ${message}`;
     // Return a helpful error message
     return NextResponse.json(
       { 
-        error: 'I apologize, but I\'m experiencing technical difficulties. Please contact our team directly at +962 79 687 2273 or info@trilogytradingllc.com for immediate assistance.',
+        error: 'I apologize, but I\'m experiencing technical difficulties. Please contact our team directly at +962796564791 or info@trilogytradingllc.com for immediate assistance.',
         fallback: true
       },
       { status: 500 }

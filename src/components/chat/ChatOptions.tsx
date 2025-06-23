@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 interface ChatOptionsProps {
-  onOptionSelect: (option: 'whatsapp' | 'live') => void;
+  onOptionSelect: (option: 'whatsapp' | 'live' | 'hexabot') => void;
   isVisible: boolean;
 }
 
@@ -20,8 +20,23 @@ const ChatOptions: React.FC<ChatOptionsProps> = ({ onOptionSelect, isVisible }) 
     >
       <div className="bg-white rounded-2xl shadow-lg p-3 min-w-[240px] backdrop-blur-sm bg-opacity-95 border border-gray-100">
         <button
+          onClick={() => onOptionSelect('hexabot')}
+          className="w-full text-left px-4 py-3.5 hover:bg-purple-50 rounded-xl flex items-center space-x-3 rtl:space-x-reverse transition-all duration-200 group"
+        >
+          <div className="flex-shrink-0 w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center group-hover:bg-purple-200 transition-colors">
+            <svg className="w-5 h-5 text-purple-600" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+          </div>
+          <div className="flex-1">
+            <p className="font-medium text-gray-900">AI Assistant</p>
+            <p className="text-sm text-gray-500">Powered by Hexabot</p>
+          </div>
+        </button>
+
+        <button
           onClick={() => onOptionSelect('whatsapp')}
-          className="w-full text-left px-4 py-3.5 hover:bg-green-50 rounded-xl flex items-center space-x-3 rtl:space-x-reverse transition-all duration-200 group"
+          className="w-full mt-2 text-left px-4 py-3.5 hover:bg-green-50 rounded-xl flex items-center space-x-3 rtl:space-x-reverse transition-all duration-200 group"
         >
           <div className="flex-shrink-0 w-10 h-10 bg-green-100 rounded-full flex items-center justify-center group-hover:bg-green-200 transition-colors">
             <svg className="w-5 h-5 text-green-600" viewBox="0 0 24 24" fill="currentColor">
@@ -53,4 +68,4 @@ const ChatOptions: React.FC<ChatOptionsProps> = ({ onOptionSelect, isVisible }) 
   );
 };
 
-export default ChatOptions; 
+export default ChatOptions;

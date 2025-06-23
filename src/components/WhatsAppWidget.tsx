@@ -3,7 +3,7 @@ import WhatsAppIcon from '../images/whatsapp-icon.svg';
 
 const WhatsAppWidget = () => {
   const { t, i18n } = useTranslation();
-  const phoneNumber = '962796872273'; // Without the + symbol
+  const phoneNumber = '962796564791'; // Without the + symbol
   const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
   return (

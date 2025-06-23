@@ -6,8 +6,13 @@ import {
   HandshakeIcon, 
   Building2, 
   FileText, 
-  PackageOpen 
+  PackageOpen,
+  ArrowRight,
+  Sparkles,
+  TrendingUp,
+  Shield
 } from 'lucide-react';
+import styles from './Services.module.css';
 
 const iconMap = {
   Search,
@@ -34,68 +39,140 @@ const CoreServices = () => {
 
   const coreServices = services.slice(0, 3);
 
+  const stats = [
+    { icon: <TrendingUp className="w-6 h-6" />, value: '500+', label: 'Global Clients' },
+    { icon: <Shield className="w-6 h-6" />, value: '15+', label: 'Years Experience' },
+    { icon: <Sparkles className="w-6 h-6" />, value: '30+', label: 'Countries Served' }
+  ];
+
   return (
-    <section id="services" className="py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            {t('services.title')}
+    <section id="services" className={styles.servicesSection}>
+      {/* Background Elements */}
+      <div className={styles.backgroundElements}>
+        <div className={styles.gradientOrb1} />
+        <div className={styles.gradientOrb2} />
+        <div className={styles.floatingElements}>
+          {[...Array(15)].map((_, i) => (
+            <div 
+              key={i} 
+              className={styles.floatingElement}
+              style={{
+                left: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 10}s`,
+                animationDuration: `${20 + Math.random() * 10}s`
+              }}
+            />
+          ))}
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Header Section */}
+        <div className={`${styles.headerSection} text-center mb-20`}>
+          <div className={styles.premiumBadge}>
+            <Sparkles className="w-4 h-4" />
+            <span>PREMIUM SERVICES</span>
+          </div>
+          
+          <h2 className={styles.sectionTitle}>
+            <span className={styles.titleGradient}>
+              {t('services.title')}
+            </span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          
+          <p className={styles.sectionSubtitle}>
             {t('services.subtitle')}
           </p>
+
+          {/* Stats Bar */}
+          <div className={styles.statsContainer}>
+            {stats.map((stat, index) => (
+              <div key={index} className={styles.statItem}>
+                <div className={styles.statIcon}>
+                  {stat.icon}
+                </div>
+                <div className={styles.statContent}>
+                  <span className={styles.statValue}>{stat.value}</span>
+                  <span className={styles.statLabel}>{stat.label}</span>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Services Grid */}
+        <div className={styles.servicesGrid}>
           {coreServices.map((service, index) => {
             const iconKeys = ['Search', 'Truck', 'HandshakeIcon'] as const;
             const ServiceIcon = iconMap[iconKeys[index]];
-            
             const serviceId = service.link.split('/').pop();
             
             return (
               <Link
                 key={serviceId}
                 to={`/services/${serviceId}`}
-                className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden"
+                className={`${styles.serviceCard} stagger-item`}
+                style={{ animationDelay: `${index * 150}ms` }}
               >
-                <div className="p-6">
-                  <div className="w-14 h-14 bg-gradient-to-r from-brand-gold to-brand-bronze rounded-lg flex items-center justify-center mb-6">
-                    <ServiceIcon className="h-8 w-8 text-white" />
+                <div className={styles.cardBackground} />
+                <div className={styles.cardContent}>
+                  <div className={styles.iconContainer}>
+                    <div className={styles.iconBackground} />
+                    <ServiceIcon className={styles.serviceIcon} />
+                    <div className={styles.iconGlow} />
                   </div>
 
-                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-brand-gold transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {service.description}
-                  </p>
+                  <div className={styles.serviceContent}>
+                    <h3 className={styles.serviceTitle}>
+                      {service.title}
+                    </h3>
+                    <p className={styles.serviceDescription}>
+                      {service.description}
+                    </p>
+                  </div>
+
+                  <div className={styles.cardFooter}>
+                    <span className={styles.learnMore}>Learn More</span>
+                    <ArrowRight className={styles.arrowIcon} />
+                  </div>
                 </div>
+
+                {/* Hover Effects */}
+                <div className={styles.hoverOverlay} />
+                <div className={styles.shimmerEffect} />
               </Link>
             );
           })}
         </div>
 
-        <div className="text-center mt-12">
-          <Link
-            to="/services"
-            className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-brand-gold to-brand-bronze hover:from-brand-bronze hover:to-brand-gold transition-all duration-300 transform hover:scale-105"
-          >
-            {t('services.viewAll')}
-            <svg
-              className="ml-2 -mr-1 w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M13 7l5 5m0 0l-5 5m5-5H6"
-              />
-            </svg>
-          </Link>
+        {/* CTA Section */}
+        <div className={styles.ctaSection}>
+          <div className={styles.ctaContent}>
+            <h3 className={styles.ctaTitle}>
+              Ready to Transform Your Trade Operations?
+            </h3>
+            <p className={styles.ctaDescription}>
+              Discover all our premium services and find the perfect solution for your business needs
+            </p>
+            
+            <div className={styles.ctaButtons}>
+              <Link to="/services" className={`${styles.primaryCta} btn-premium`}>
+                <span>Explore All Services</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              
+              <Link to="/#contact" className={`${styles.secondaryCta} btn-glass`}>
+                <span>Get Free Consultation</span>
+              </Link>
+            </div>
+          </div>
+
+          {/* Decorative Elements */}
+          <div className={styles.ctaDecorations}>
+            <div className={styles.decorativeCircle1} />
+            <div className={styles.decorativeCircle2} />
+            <div className={styles.decorativeCircle3} />
+          </div>
         </div>
       </div>
     </section>

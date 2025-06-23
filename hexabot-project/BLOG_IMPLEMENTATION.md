@@ -190,7 +190,7 @@ Components:
 1. **"Chat with Hexabot"** - Immediate AI assistance
 2. **"Contact Our Experts"** - Human specialist consultation
 3. **"Subscribe to Newsletter"** - Lead capture and nurturing
-4. **"Call +962 79 687 2273"** - Direct phone contact
+4. **"Call +962796564791"** - Direct phone contact
 
 ### **Content-to-Conversion Flow**
 1. **Discovery**: SEO and social media traffic to blog

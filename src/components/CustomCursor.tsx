@@ -64,7 +64,6 @@ const CustomCursor: React.FC = () => {
           left: `${position.x}px`,
           top: `${position.y}px`,
         }}
-        data-oid="5az1dgb"
       />
 
       <div
@@ -73,7 +72,6 @@ const CustomCursor: React.FC = () => {
           left: `${position.x}px`,
           top: `${position.y}px`,
         }}
-        data-oid="outxhy0"
       />
     </>
   );

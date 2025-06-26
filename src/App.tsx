@@ -5,6 +5,8 @@ import Home from "./pages/Home";
 import ServiceDetail from "./pages/ServiceDetail";
 import ServicesPage from "./pages/Services";
 import ProductsPage from "./pages/Products";
+import BlogPage from "./pages/Blog";
+import Urea46Page from "./pages/Urea46";
 import Footer from "./components/Footer";
 import LoadingSpinner from "./components/LoadingSpinner";
 import { useTranslation } from "react-i18next";
@@ -69,49 +71,33 @@ function App() {
   }, [i18n]);
 
   return (
-    <BrowserRouter data-oid="yk-:8wt">
+    <BrowserRouter>
       {isLoading && (
-        <div
-          className="fixed inset-0 bg-white z-50 flex items-center justify-center"
-          data-oid="lhl2_d7"
-        >
-          <LoadingSpinner data-oid="tc:ww16" />
+        <div className="fixed inset-0 bg-white z-50 flex items-center justify-center">
+          <LoadingSpinner />
         </div>
       )}
       <div
         className={`min-h-screen bg-white ${isLoading ? "opacity-0" : "opacity-100 transition-opacity duration-300"}`}
-        data-oid="1d-0tj3"
       >
-        <ScrollToTop setIsLoading={setIsLoading} data-oid="ka3ju08" />
-        <Navbar data-oid="mokn0o0" />
-        <Routes data-oid="f97gm1c">
-          <Route
-            path="/"
-            element={<Home data-oid="p:69n_h" />}
-            data-oid="bvfup6z"
-          />
+        <ScrollToTop setIsLoading={setIsLoading} />
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
 
-          <Route
-            path="/services/:serviceId"
-            element={<ServiceDetail data-oid="ajyvq08" />}
-            data-oid="2ea-ybq"
-          />
+          <Route path="/services/:serviceId" element={<ServiceDetail />} />
 
-          <Route
-            path="/services"
-            element={<ServicesPage data-oid="6.psixy" />}
-            data-oid="zkx24_p"
-          />
+          <Route path="/services" element={<ServicesPage />} />
 
-          <Route
-            path="/products"
-            element={<ProductsPage data-oid="ezbak6:" />}
-            data-oid="f1npgq5"
-          />
+          <Route path="/products" element={<ProductsPage />} />
+          
+          <Route path="/blog" element={<BlogPage />} />
+          
+          <Route path="/products/urea-46" element={<Urea46Page />} />
         </Routes>
-        <Footer data-oid="wzo5fys" />
+        <Footer />
       </div>
-      <ChatWidget data-oid="l_q87la" />
+      <ChatWidget />
     </BrowserRouter>
   );
 }

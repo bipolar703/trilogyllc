@@ -3,8 +3,10 @@
     "home": "Home",
     "services": "Services",
     "about": "About Us",
-    
-=======
+    "products": "Products",
+    "contactUs": "Contact Us",
+    "blog": "Blog"
+  },
   "hero": {
     "title": "Global Trade & Supply Chain Excellence",
     "subtitle": "Your Strategic Partner in International Commerce",
@@ -553,6 +555,178 @@
     "viewAll": "View All Services",
     "viewAllDescription": "Explore our complete range of international trade services"
   },
+  "products": {
+    "title": "Our Products",
+    "description": "Discover our comprehensive range of high-quality products sourced from trusted suppliers worldwide. We specialize in connecting businesses with the right products for their needs.",
+    "searchPlaceholder": "Search products...",
+    "allCategories": "All Categories",
+    "categoriesTitle": "Product Categories",
+    "categoriesFound": "categories found",
+    "specifications": "Specifications",
+    "applications": "Applications",
+    "targetMarkets": "Target Markets",
+    "noResults": "No products found",
+    "noResultsDescription": "Try adjusting your search terms or category filter.",
+    "clearFilters": "Clear Filters",
+    "capabilities": {
+      "title": "Our Product Capabilities",
+      "description": "We leverage our global network and expertise to deliver exceptional product sourcing and quality assurance services.",
+      "sourcing": {
+        "title": "Global Sourcing",
+        "description": "Access to verified suppliers worldwide with competitive pricing and quality assurance."
+      },
+      "quality": {
+        "title": "Quality Control",
+        "description": "Rigorous quality control processes to ensure all products meet international standards."
+      },
+      "global": {
+        "title": "Global Network",
+        "description": "Extensive supplier network across 30+ countries for diverse product categories."
+      },
+      "compliance": {
+        "title": "Compliance",
+        "description": "Full regulatory compliance and certification management for all product categories."
+      }
+    },
+    "categories": [
+      {
+        "id": "fertilizers",
+        "name": "Fertilizers & Chemicals",
+        "description": "High-quality fertilizers and agricultural chemicals for enhanced crop productivity and soil health.",
+        "icon": "Package",
+        "features": ["Premium Quality", "ISO Certified", "Global Standards", "Bulk Supply"],
+        "markets": ["Agriculture", "Horticulture", "Industrial", "Export"],
+        "products": [
+          {
+            "name": "Urea 46%",
+            "description": "High-quality nitrogen fertilizer with 46% nitrogen content for optimal crop nutrition.",
+            "specifications": [
+              "Nitrogen (N): 46% minimum",
+              "Moisture: 0.5% maximum",
+              "Biuret: 1.0% maximum",
+              "Particle size: 2-4mm (90%)",
+              "Free flowing white granules"
+            ],
+            "applications": ["Wheat", "Corn", "Rice", "Cotton", "Vegetables", "Fruits"]
+          },
+          {
+            "name": "DAP (Diammonium Phosphate)",
+            "description": "Balanced fertilizer providing both nitrogen and phosphorus for plant growth.",
+            "specifications": [
+              "Nitrogen (N): 18% minimum",
+              "Phosphorus (P2O5): 46% minimum",
+              "Moisture: 2.0% maximum",
+              "Particle size: 2-4mm",
+              "Gray granular form"
+            ],
+            "applications": ["Cereals", "Legumes", "Root crops", "Plantation crops"]
+          },
+          {
+            "name": "NPK Fertilizers",
+            "description": "Complete fertilizer containing nitrogen, phosphorus, and potassium.",
+            "specifications": [
+              "Multiple NPK ratios available",
+              "Balanced nutrient composition",
+              "Water soluble options",
+              "Slow-release formulations",
+              "Custom blends available"
+            ],
+            "applications": ["Field crops", "Horticulture", "Greenhouse", "Specialty crops"]
+          }
+        ]
+      },
+      {
+        "id": "textiles",
+        "name": "Textiles & Apparel",
+        "description": "Premium textiles and ready-made garments from certified manufacturers.",
+        "icon": "Shirt",
+        "features": ["Sustainable Materials", "Ethical Production", "Quality Assured", "Custom Orders"],
+        "markets": ["Fashion", "Corporate", "Retail", "Export"],
+        "products": [
+          {
+            "name": "Cotton Fabrics",
+            "description": "100% pure cotton fabrics in various weights and finishes.",
+            "specifications": [
+              "100% cotton composition",
+              "GSM range: 120-300",
+              "Width: 44-60 inches",
+              "Pre-shrunk and colorfast",
+              "OEKO-TEX certified"
+            ],
+            "applications": ["Apparel", "Home textiles", "Industrial use"]
+          },
+          {
+            "name": "Ready-Made Garments",
+            "description": "High-quality clothing for men, women, and children.",
+            "specifications": [
+              "Multiple size ranges",
+              "Quality stitching",
+              "Color fastness tested",
+              "International standards",
+              "Custom labeling available"
+            ],
+            "applications": ["Retail", "Corporate uniforms", "Export"]
+          }
+        ]
+      },
+      {
+        "id": "electronics",
+        "name": "Electronics & Technology",
+        "description": "Latest electronic devices and technology solutions for modern businesses.",
+        "icon": "Cpu",
+        "features": ["Latest Technology", "Warranty Included", "Technical Support", "Bulk Pricing"],
+        "markets": ["IT", "Telecommunications", "Consumer", "Industrial"],
+        "products": [
+          {
+            "name": "Consumer Electronics",
+            "description": "Wide range of consumer electronic devices and accessories.",
+            "specifications": [
+              "Latest models available",
+              "International warranty",
+              "Quality certifications",
+              "Bulk packaging",
+              "Technical documentation"
+            ],
+            "applications": ["Retail", "Distribution", "Corporate"]
+          }
+        ]
+      },
+      {
+        "id": "machinery",
+        "name": "Machinery & Equipment",
+        "description": "Industrial machinery and equipment for various manufacturing needs.",
+        "icon": "Wrench",
+        "features": ["Industrial Grade", "Maintenance Support", "Installation Service", "Training Included"],
+        "markets": ["Manufacturing", "Construction", "Agriculture", "Mining"],
+        "products": [
+          {
+            "name": "Industrial Equipment",
+            "description": "Heavy-duty industrial machinery for manufacturing operations.",
+            "specifications": [
+              "High durability",
+              "Energy efficient",
+              "Safety certified",
+              "Maintenance friendly",
+              "Installation support"
+            ],
+            "applications": ["Manufacturing", "Processing", "Assembly"]
+          }
+        ]
+      }
+    ],
+    "stats": {
+      "suppliers": "Verified Suppliers",
+      "countries": "Countries Served",
+      "years": "Years Experience",
+      "satisfaction": "Client Satisfaction"
+    },
+    "cta": {
+      "title": "Ready to Source Your Products?",
+      "description": "Get access to our global network of verified suppliers and find the products you need with competitive pricing and quality assurance.",
+      "getQuote": "Get Product Quote",
+      "viewServices": "View Our Services"
+    }
+  },
   "about": {
     "title": "About Trilogy Trading",
     "subtitle": "Your Trusted Partner in Global Trade",
@@ -744,6 +918,7 @@
         "country": "Jordan",
         "poBox": "P.O. Box: 123456",
         "phone": "+962796564791",
+        "phone2": "+962796872273",
         "email": "info@trilogytradingllc.com",
         "hours": {
           "title": "Working Hours",
@@ -802,7 +977,7 @@
       }
     },
     "contact": {
-      "title": "Contact Info",
+      "title": "Get in Touch",
       "address": "Wasfi Al Tal St., Amman, Jordan",
       "phone": "+962796564791",
       "phoneDisplay": "+962796564791",

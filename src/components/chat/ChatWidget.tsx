@@ -2,13 +2,11 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import LiveIndicator from "./LiveIndicator";
 import ChatOptions from "./ChatOptions";
-import LiveChat from "./LiveChat";
 import HexabotChat from "./HexabotChat";
 import ChatToggle from "./ChatToggle";
 
 const ChatWidget: React.FC = () => {
   const [isOptionsVisible, setIsOptionsVisible] = useState(false);
-  const [isLiveChatVisible, setIsLiveChatVisible] = useState(false);
   const [isHexabotVisible, setIsHexabotVisible] = useState(false);
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === "ar";
@@ -17,8 +15,6 @@ const ChatWidget: React.FC = () => {
     if (option === "whatsapp") {
       const phoneNumber = "962796564791";
       window.open(`https://wa.me/${phoneNumber}`, "_blank");
-    } else if (option === "live") {
-      setIsLiveChatVisible(true);
     } else if (option === "hexabot") {
       setIsHexabotVisible(true);
     }
@@ -28,7 +24,6 @@ const ChatWidget: React.FC = () => {
   const handleHexabotToggle = () => {
     setIsHexabotVisible(!isHexabotVisible);
     setIsOptionsVisible(false);
-    setIsLiveChatVisible(false);
   };
 
   return (
@@ -36,18 +31,15 @@ const ChatWidget: React.FC = () => {
       {/* Main Chat Widget */}
       <div
         className={`fixed ${isRTL ? "left-4 sm:left-6" : "right-4 sm:right-6"} bottom-4 sm:bottom-6 z-50 flex flex-col items-end`}
-        data-oid="sk6h6yq"
       >
-        <div className="relative" data-oid="kj:hzty">
+        <div className="relative">
           <button
             onClick={() => {
               setIsOptionsVisible(!isOptionsVisible);
-              if (isLiveChatVisible) setIsLiveChatVisible(false);
               if (isHexabotVisible) setIsHexabotVisible(false);
             }}
             className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
             aria-label={t("chat.open")}
-            data-oid="e2s_8t_"
           >
             {isOptionsVisible ? (
               <svg
@@ -55,14 +47,12 @@ const ChatWidget: React.FC = () => {
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
-                data-oid="-r3wl1w"
               >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
                   d="M6 18L18 6M6 6l12 12"
-                  data-oid="0.p5_wk"
                 />
               </svg>
             ) : (
@@ -72,17 +62,15 @@ const ChatWidget: React.FC = () => {
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
-                  data-oid="56cg9:y"
                 >
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
                     d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-                    data-oid="k5qdp4x"
                   />
                 </svg>
-                <LiveIndicator data-oid="ohgju61" />
+                <LiveIndicator />
               </>
             )}
           </button>
@@ -90,26 +78,22 @@ const ChatWidget: React.FC = () => {
           <ChatOptions
             isVisible={isOptionsVisible}
             onOptionSelect={handleOptionSelect}
-            data-oid="egtgmrk"
           />
         </div>
       </div>
 
       {/* Hexabot Chat Toggle - Alternative access */}
-      {!isOptionsVisible && !isLiveChatVisible && (
+      {!isOptionsVisible && (
         <ChatToggle
           isVisible={isHexabotVisible}
           onClick={handleHexabotToggle}
-          data-oid="d7v:_zf"
         />
       )}
 
       {/* Chat Components */}
-      <LiveChat isVisible={isLiveChatVisible} data-oid="cws.pb2" />
       <HexabotChat
         isVisible={isHexabotVisible}
         onClose={() => setIsHexabotVisible(false)}
-        data-oid="n391zqt"
       />
     </>
   );

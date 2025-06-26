@@ -19,24 +19,16 @@ const GlowCard: React.FC<GlowCardProps> = ({
 
   return (
     <StyledWrapper
-      colorIndex={colorIndex}
-      duration={duration}
-      reverse={isReverse}
-      data-oid="1jaelfw"
+      $colorIndex={colorIndex}
+      $duration={duration}
+      $reverse={isReverse}
     >
-      <div className="card" data-oid="iixl.kh">
-        <div className="bg" data-oid="3m05it:">
-          <h3
-            className="text-xl font-bold text-gray-900 mb-2"
-            data-oid=".i7srdn"
-          >
-            {title}
-          </h3>
-          <p className="text-gray-600 text-sm" data-oid="12o0dhb">
-            {description}
-          </p>
+      <div className="card">
+        <div className="bg">
+          <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
+          <p className="text-gray-600 text-sm">{description}</p>
         </div>
-        <div className="blob" data-oid="xat56iw" />
+        <div className="blob" />
       </div>
     </StyledWrapper>
   );
@@ -51,9 +43,9 @@ const gradients = [
 ];
 
 const StyledWrapper = styled.div<{
-  colorIndex: number;
-  duration: number;
-  reverse: boolean;
+  $colorIndex: number;
+  $duration: number;
+  $reverse: boolean;
 }>`
   .card {
     position: relative;
@@ -119,12 +111,12 @@ const StyledWrapper = styled.div<{
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background: ${(props) => gradients[props.colorIndex]};
+    background: ${(props) => gradients[props.$colorIndex]};
     opacity: 0.8;
     filter: blur(12px);
-    animation: blob-bounce-${(props) => (props.reverse ? "reverse" : "normal")}
-      ${(props) => props.duration}s infinite ease;
-    animation-direction: ${(props) => (props.reverse ? "reverse" : "normal")};
+    animation: blob-bounce-${(props) => (props.$reverse ? "reverse" : "normal")}
+      ${(props) => props.$duration}s infinite ease;
+    animation-direction: ${(props) => (props.$reverse ? "reverse" : "normal")};
 
     @media (max-width: 640px) {
       width: 120px;

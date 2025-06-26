@@ -13,18 +13,11 @@ const WhatsAppWidget = () => {
       rel="noopener noreferrer"
       className={`fixed ${i18n.language === "ar" ? "left-6" : "right-6"} bottom-6 z-50 transition-transform duration-300 hover:scale-110 group`}
       aria-label="Chat on WhatsApp"
-      data-oid="odftnvp"
     >
-      <img
-        src={WhatsAppIcon}
-        alt="WhatsApp"
-        className="w-12 h-12"
-        data-oid="iqccu0q"
-      />
+      <img src={WhatsAppIcon} alt="WhatsApp" className="w-12 h-12" />
 
       <span
         className={`absolute ${i18n.language === "ar" ? "right-full mr-3" : "left-full ml-3"} top-1/2 -translate-y-1/2 bg-gray-900 text-white px-3 py-1 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
-        data-oid="re3ouui"
       >
         {t("common.chatWithUs")}
       </span>

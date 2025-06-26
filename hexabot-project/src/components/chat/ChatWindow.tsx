@@ -132,26 +132,26 @@ How can I assist you today?`,
   return (
     <Card
       className={`flex flex-col h-[600px] max-w-2xl mx-auto shadow-lg ${className}`}
-      data-oid="zy131f0"
+      data-oid="ya00n76"
     >
       {/* Chat Header */}
       <CardHeader
         className="flex-shrink-0 border-b border-gray-200 bg-gradient-to-r from-trilogy-blue to-trilogy-navy text-white"
-        data-oid="l54xe0s"
+        data-oid="_aq_9ro"
       >
-        <div className="flex items-center justify-between" data-oid="xxzkq1o">
-          <div className="flex items-center gap-3" data-oid="p_swwie">
+        <div className="flex items-center justify-between" data-oid="b8:r983">
+          <div className="flex items-center gap-3" data-oid="z3yv-i-">
             <div
               className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"
-              data-oid="x1yw.fy"
+              data-oid="snlt8jm"
             >
-              <Bot className="h-5 w-5" data-oid="udqd:va" />
+              <Bot className="h-5 w-5" data-oid="b9sxp.d" />
             </div>
-            <div data-oid="pe4dt.b">
-              <h3 className="font-semibold text-lg" data-oid="ruxk57v">
+            <div data-oid="wa082eu">
+              <h3 className="font-semibold text-lg" data-oid="skgc2xu">
                 Hexabot
               </h3>
-              <p className="text-sm text-blue-100" data-oid="_t-_tb.">
+              <p className="text-sm text-blue-100" data-oid="z537-h0">
                 Digital Consultant • Trilogy Trading LLC
               </p>
             </div>
@@ -159,73 +159,73 @@ How can I assist you today?`,
 
           <div
             className="flex items-center gap-4 text-sm text-blue-100"
-            data-oid="7vei86v"
+            data-oid="5wilx06"
           >
-            <div className="flex items-center gap-1" data-oid="018q1pn">
+            <div className="flex items-center gap-1" data-oid="5ds9_ms">
               <div
                 className="w-2 h-2 bg-green-400 rounded-full animate-pulse"
-                data-oid=".9v6gp9"
+                data-oid="n-ty68e"
               ></div>
-              <span data-oid="az6prb1">Online</span>
+              <span data-oid="c.zldax">Online</span>
             </div>
-            <div className="flex items-center gap-1" data-oid="5xft72m">
-              <Clock className="h-3 w-3" data-oid="h1p1dq." />
-              <span data-oid="a2dj.ox">24/7</span>
+            <div className="flex items-center gap-1" data-oid="_j07q:3">
+              <Clock className="h-3 w-3" data-oid="8v8q6xr" />
+              <span data-oid="r7ssv8v">24/7</span>
             </div>
           </div>
         </div>
       </CardHeader>
 
       {/* Messages Area */}
-      <CardContent className="flex-1 p-0 overflow-hidden" data-oid="0qv98_z">
-        <ScrollArea className="h-full" ref={scrollAreaRef} data-oid="79ranpj">
-          <div className="p-4 space-y-4" data-oid="kqc9j9b">
+      <CardContent className="flex-1 p-0 overflow-hidden" data-oid="-muhf99">
+        <ScrollArea className="h-full" ref={scrollAreaRef} data-oid="0f0iqsr">
+          <div className="p-4 space-y-4" data-oid="-4mfv3z">
             {messages.map((message) => (
               <MessageBubble
                 key={message.id}
                 message={message}
-                data-oid="bhazlt_"
+                data-oid="3crw4rf"
               />
             ))}
 
-            {isTyping && <TypingIndicator data-oid="6mmaqzx" />}
+            {isTyping && <TypingIndicator data-oid="mkmdigf" />}
 
-            <div ref={messagesEndRef} data-oid="ol81vtz" />
+            <div ref={messagesEndRef} data-oid="uk3:ea:" />
           </div>
         </ScrollArea>
       </CardContent>
 
       {/* Chat Input */}
-      <div className="flex-shrink-0" data-oid="sp.lj54">
+      <div className="flex-shrink-0" data-oid="ryae4c6">
         <ChatInput
           onSendMessage={handleSendMessage}
           disabled={isLoading}
           isLoading={isLoading}
           placeholder="Ask me about global trade, sourcing, logistics, or documentation..."
-          data-oid="gb7g:oo"
+          data-oid="oy6ppip"
         />
       </div>
 
       {/* Footer */}
       <div
         className="flex-shrink-0 px-4 py-2 bg-gray-50 border-t border-gray-200"
-        data-oid="stt8ogl"
+        data-oid="t3pxjuf"
       >
         <div
           className="flex items-center justify-between text-xs text-gray-500"
-          data-oid="_pw2522"
+          data-oid="v_4ct5b"
         >
-          <div className="flex items-center gap-4" data-oid="l8r4515">
-            <span data-oid="axmzzjj">Powered by Hexabot AI</span>
-            <div className="flex items-center gap-1" data-oid="2qpsi21">
-              <Users className="h-3 w-3" data-oid="5jj1_vy" />
-              <span data-oid="bfplll6">Human agents available</span>
+          <div className="flex items-center gap-4" data-oid="m85vl:y">
+            <span data-oid="15y92do">Powered by Hexabot AI</span>
+            <div className="flex items-center gap-1" data-oid="wajuzv8">
+              <Users className="h-3 w-3" data-oid="jweitub" />
+              <span data-oid="g:irx1z">Human agents available</span>
             </div>
           </div>
-          <div className="text-right" data-oid="lw_9gke">
-            <div data-oid="1x365s_">Session: {sessionId.slice(-8)}</div>
+          <div className="text-right" data-oid="xcxqa4f">
+            <div data-oid="egkvo8_">Session: {sessionId.slice(-8)}</div>
             {conversationId && (
-              <div data-oid="6m4vifx">Conv: {conversationId.slice(-8)}</div>
+              <div data-oid="5hqq2tw">Conv: {conversationId.slice(-8)}</div>
             )}
           </div>
         </div>

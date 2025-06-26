@@ -9,12 +9,9 @@ const container = document.getElementById("root");
 const root = createRoot(container!);
 
 root.render(
-  <React.StrictMode data-oid="g0or16m">
-    <Suspense
-      fallback={<LoadingSpinner data-oid="zqd_7-5" />}
-      data-oid="pwko0:i"
-    >
-      <App data-oid="ribnmyc" />
+  <React.StrictMode>
+    <Suspense fallback={<LoadingSpinner />}>
+      <App />
     </Suspense>
   </React.StrictMode>,
 );

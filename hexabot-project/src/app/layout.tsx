@@ -34,18 +34,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" data-oid="i9l7sgk">
-      <head data-oid="0oyu-9x">
-        <link rel="icon" href="/favicon.ico" data-oid="k2a-a4k" />
+    <html lang="en" data-oid="p5j2h4p">
+      <head data-oid="nak81p0">
+        <link rel="icon" href="/favicon.ico" data-oid="tfxvt84" />
         <link
           rel="apple-touch-icon"
           href="/apple-touch-icon.png"
-          data-oid="fkgka--"
+          data-oid="1pks2_f"
         />
 
-        <meta name="theme-color" content="#1e40af" data-oid="pvz4jbs" />
+        <meta name="theme-color" content="#1e40af" data-oid="o1b_khs" />
       </head>
-      <body className={inter.className} data-oid="wdehelf">
+      <body className={inter.className} data-oid="2yvq5cr">
         {children}
       </body>
     </html>

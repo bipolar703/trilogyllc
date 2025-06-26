@@ -48,17 +48,50 @@ const Home = () => {
   }, [location]);
 
   return (
-    <main data-oid=":0nbpeh">
-      <Hero data-oid="p-w2.b8" />
-      <AnimationObserver data-oid="8ccp:79">
-        <Services data-oid="_-di6bd" />
-      </AnimationObserver>
-      <AnimationObserver data-oid="o16ea90">
-        <About data-oid="bzo6ouy" />
-      </AnimationObserver>
-      <AnimationObserver data-oid="ftk4:d4">
-        <Contact data-oid="q4ved_p" />
-      </AnimationObserver>
+    <main className="bg-gradient-to-b from-gray-50 via-white to-gray-50">
+      {/* Hero Section */}
+      <section aria-label="Hero section">
+        <Hero />
+      </section>
+      
+      {/* Services Section with modern spacing */}
+      <section 
+        aria-label="Our services" 
+        className="py-16 md:py-24 lg:py-32 relative"
+        style={{
+          scrollMarginTop: '80px' // For smooth scroll offset
+        }}
+      >
+        <AnimationObserver>
+          <Services />
+        </AnimationObserver>
+      </section>
+      
+      {/* About Section with enhanced spacing */}
+      <section 
+        aria-label="About us" 
+        className="py-16 md:py-24 lg:py-32 relative"
+        style={{
+          scrollMarginTop: '80px'
+        }}
+      >
+        <AnimationObserver>
+          <About />
+        </AnimationObserver>
+      </section>
+      
+      {/* Contact Section with proper bottom spacing */}
+      <section 
+        aria-label="Contact us" 
+        className="py-16 md:py-24 lg:py-32 pb-20 md:pb-32 relative"
+        style={{
+          scrollMarginTop: '80px'
+        }}
+      >
+        <AnimationObserver>
+          <Contact />
+        </AnimationObserver>
+      </section>
     </main>
   );
 };

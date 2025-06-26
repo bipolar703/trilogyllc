@@ -27,10 +27,10 @@ export function MessageBubble({
 
   if (isSystem) {
     return (
-      <div className="flex justify-center my-4" data-oid="l06nmjt">
+      <div className="flex justify-center my-4" data-oid="_2tyt9c">
         <div
           className="bg-yellow-50 text-yellow-800 text-sm px-3 py-2 rounded-full border border-yellow-200"
-          data-oid="q33a8t1"
+          data-oid="k38y2wl"
         >
           {message.content}
         </div>
@@ -44,14 +44,14 @@ export function MessageBubble({
         "flex w-full mb-4 animate-fade-in",
         isUser ? "justify-end" : "justify-start",
       )}
-      data-oid="2n00x2m"
+      data-oid="a1y3yh5"
     >
       <div
         className={cn(
           "flex max-w-[80%] gap-3",
           isUser ? "flex-row-reverse" : "flex-row",
         )}
-        data-oid="xpen.c6"
+        data-oid="i:u7p9j"
       >
         {/* Avatar */}
         <div
@@ -61,7 +61,7 @@ export function MessageBubble({
               ? "bg-trilogy-blue text-white"
               : "bg-gray-100 text-gray-600 border border-gray-200",
           )}
-          data-oid="it0m8dd"
+          data-oid="3t0hd59"
         >
           {isUser ? "U" : "H"}
         </div>
@@ -69,7 +69,7 @@ export function MessageBubble({
         {/* Message Content */}
         <div
           className={cn("flex flex-col", isUser ? "items-end" : "items-start")}
-          data-oid="b5lzorb"
+          data-oid="jugtl9b"
         >
           {/* Message Bubble */}
           <div
@@ -79,32 +79,32 @@ export function MessageBubble({
                 ? "bg-trilogy-blue text-white rounded-br-md"
                 : "bg-white text-gray-800 border border-gray-200 rounded-bl-md",
             )}
-            data-oid="vtgany3"
+            data-oid="6pi0:u9"
           >
             {isTyping ? (
-              <div className="flex items-center space-x-1" data-oid="6q:x_a2">
-                <div className="flex space-x-1" data-oid="lrxma65">
+              <div className="flex items-center space-x-1" data-oid="k7_dyno">
+                <div className="flex space-x-1" data-oid="tj.tlyw">
                   <div
                     className="w-2 h-2 bg-gray-400 rounded-full animate-pulse-dot"
-                    data-oid="n5zs8yd"
+                    data-oid="713xcpu"
                   ></div>
                   <div
                     className="w-2 h-2 bg-gray-400 rounded-full animate-pulse-dot"
                     style={{ animationDelay: "0.2s" }}
-                    data-oid="3:109jg"
+                    data-oid="c2g1o41"
                   ></div>
                   <div
                     className="w-2 h-2 bg-gray-400 rounded-full animate-pulse-dot"
                     style={{ animationDelay: "0.4s" }}
-                    data-oid="x.0dxwy"
+                    data-oid="53ue5az"
                   ></div>
                 </div>
-                <span className="text-sm text-gray-500 ml-2" data-oid="vjo7qgr">
+                <span className="text-sm text-gray-500 ml-2" data-oid="mvx1y8k">
                   Hexabot is thinking...
                 </span>
               </div>
             ) : (
-              <div className="whitespace-pre-wrap" data-oid="qoav7oy">
+              <div className="whitespace-pre-wrap" data-oid="4ob4c:_">
                 {message.content}
               </div>
             )}
@@ -117,7 +117,7 @@ export function MessageBubble({
                 "text-xs text-gray-500 mt-1 px-1",
                 isUser ? "text-right" : "text-left",
               )}
-              data-oid="y46t8xl"
+              data-oid="--ntj_z"
             >
               {formatTime(message.created_at)}
             </div>
@@ -131,40 +131,40 @@ export function MessageBubble({
 // Typing indicator component
 export function TypingIndicator() {
   return (
-    <div className="flex justify-start w-full mb-4" data-oid="fnwqk3g">
-      <div className="flex max-w-[80%] gap-3" data-oid="v_c6rdg">
+    <div className="flex justify-start w-full mb-4" data-oid="-zy2xte">
+      <div className="flex max-w-[80%] gap-3" data-oid="a3hfbm7">
         {/* Avatar */}
         <div
           className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium bg-gray-100 text-gray-600 border border-gray-200"
-          data-oid="n_ihi73"
+          data-oid="46-jcqr"
         >
           H
         </div>
 
         {/* Typing Animation */}
-        <div className="flex flex-col items-start" data-oid="1-p:isr">
+        <div className="flex flex-col items-start" data-oid="lxk9ym3">
           <div
             className="px-4 py-3 rounded-2xl rounded-bl-md bg-white border border-gray-200 shadow-sm"
-            data-oid="vhnqqbe"
+            data-oid="hiw537s"
           >
-            <div className="flex items-center space-x-1" data-oid="1oohul-">
-              <div className="flex space-x-1" data-oid="1qtkoso">
+            <div className="flex items-center space-x-1" data-oid="_u5-:ap">
+              <div className="flex space-x-1" data-oid="214ywxj">
                 <div
                   className="w-2 h-2 bg-gray-400 rounded-full animate-pulse-dot"
-                  data-oid="bmcv5dr"
+                  data-oid="08adtm_"
                 ></div>
                 <div
                   className="w-2 h-2 bg-gray-400 rounded-full animate-pulse-dot"
                   style={{ animationDelay: "0.2s" }}
-                  data-oid="kch50r4"
+                  data-oid="rp-czz_"
                 ></div>
                 <div
                   className="w-2 h-2 bg-gray-400 rounded-full animate-pulse-dot"
                   style={{ animationDelay: "0.4s" }}
-                  data-oid="st9crgm"
+                  data-oid="ptt5mnz"
                 ></div>
               </div>
-              <span className="text-sm text-gray-500 ml-2" data-oid="6h0un-l">
+              <span className="text-sm text-gray-500 ml-2" data-oid="l4oikh8">
                 Hexabot is thinking...
               </span>
             </div>

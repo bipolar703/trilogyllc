@@ -65,7 +65,7 @@ const AnimationObserver: React.FC<AnimationObserverProps> = ({
   }, [threshold, rootMargin, triggerOnce]);
 
   return (
-    <div ref={elementRef} className={`reveal ${className}`} data-oid="0a70xe7">
+    <div ref={elementRef} className={`reveal ${className}`}>
       {children}
     </div>
   );

@@ -21,18 +21,14 @@ const ChatToggle: React.FC<ChatToggleProps> = ({
           : "bg-blue-600 hover:bg-blue-700 animate-pulse"
       }`}
       aria-label={isVisible ? "Close chat" : "Open chat"}
-      data-oid="u:3pfcl"
     >
       {isVisible ? (
-        <X className="w-6 h-6 text-white" data-oid="tllt1zn" />
+        <X className="w-6 h-6 text-white" />
       ) : (
         <>
-          <MessageCircle className="w-6 h-6 text-white" data-oid="s8_hh:w" />
+          <MessageCircle className="w-6 h-6 text-white" />
           {unreadCount > 0 && (
-            <div
-              className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center font-bold"
-              data-oid="pyfn5vt"
-            >
+            <div className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center font-bold">
               {unreadCount > 9 ? "9+" : unreadCount}
             </div>
           )}

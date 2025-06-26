@@ -1,9 +1,11 @@
 /* Services Section */
 .servicesSection {
   position: relative;
-  padding: 5rem 0;
+  padding: 0; /* Remove internal padding, let Home component handle it */
   background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 50%, #ffffff 100%);
   overflow: hidden;
+  /* Modern container query support */
+  container-type: inline-size;
 }
 
 /* Background Elements */

@@ -51,13 +51,13 @@ export function ChatInput({
   };
 
   return (
-    <div className="border-t border-gray-200 bg-white p-4" data-oid="q7a5b6a">
+    <div className="border-t border-gray-200 bg-white p-4" data-oid="o::i2jz">
       <form
         onSubmit={handleSubmit}
         className="flex gap-3 items-end"
-        data-oid=".v4aymk"
+        data-oid="m46xqv-"
       >
-        <div className="flex-1 relative" data-oid="6q25mwp">
+        <div className="flex-1 relative" data-oid="q_5.z5q">
           <Textarea
             ref={textareaRef}
             value={message}
@@ -71,14 +71,14 @@ export function ChatInput({
               "disabled:opacity-50 disabled:cursor-not-allowed",
             )}
             rows={1}
-            data-oid="v5v:7gy"
+            data-oid="6gmbayb"
           />
 
           {/* Character count indicator */}
           {message.length > 0 && (
             <div
               className="absolute bottom-2 right-2 text-xs text-gray-400"
-              data-oid="u733tug"
+              data-oid="e6-:2u0"
             >
               {message.length}/2000
             </div>
@@ -93,14 +93,14 @@ export function ChatInput({
             "disabled:opacity-50 disabled:cursor-not-allowed",
             "transition-all duration-200",
           )}
-          data-oid="cp2t309"
+          data-oid=":bwoywg"
         >
           {isLoading ? (
-            <Loader2 className="h-4 w-4 animate-spin" data-oid="25-58lh" />
+            <Loader2 className="h-4 w-4 animate-spin" data-oid="j.5c:ey" />
           ) : (
-            <Send className="h-4 w-4" data-oid="c2uzny7" />
+            <Send className="h-4 w-4" data-oid="tv4byfx" />
           )}
-          <span className="sr-only" data-oid="fdo:s3-">
+          <span className="sr-only" data-oid="x_cnu4q">
             Send message
           </span>
         </Button>
@@ -109,15 +109,15 @@ export function ChatInput({
       {/* Helper text */}
       <div
         className="mt-2 text-xs text-gray-500 flex justify-between items-center"
-        data-oid="w5.1pbl"
+        data-oid=".o100s4"
       >
-        <span data-oid="wpelr56">
+        <span data-oid="9ujz2v-">
           Press Enter to send, Shift+Enter for new line
         </span>
-        <span className="flex items-center gap-1" data-oid="24-3vl3">
+        <span className="flex items-center gap-1" data-oid="6orc2_b">
           <div
             className="w-2 h-2 bg-green-500 rounded-full animate-pulse"
-            data-oid="gnj_d2."
+            data-oid="t9bcw6z"
           ></div>
           Hexabot is online
         </span>

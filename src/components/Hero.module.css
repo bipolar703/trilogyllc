@@ -1,7 +1,14 @@
-/* Hero Container */
+/* Hero Container - Modern responsive sizing with proper aspect ratios */
 .heroContainer {
   position: relative;
+  /* Use modern viewport units for better responsive design */
+  min-height: 100svh; /* Support for new viewport units */
+  height: clamp(600px, 100vh, 1200px); /* Constrained height with fallback */
   background: radial-gradient(ellipse at center, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.95) 100%);
+  /* Improved containment for better performance */
+  contain: layout style paint;
+  /* Better isolation for GPU acceleration */
+  will-change: transform;
 }
 
 /* Cinematic Noise Overlay */

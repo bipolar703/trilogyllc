@@ -65,20 +65,21 @@ const Hero = () => {
 
   return (
     <div
-      className={`${styles.heroContainer} relative h-[calc(100vh-4rem)] overflow-hidden`}
-      data-oid="q9irebb"
+      className={`${styles.heroContainer} relative overflow-hidden`}
+      role="banner"
+      aria-label="Hero slideshow"
     >
       {/* Cinematic Noise Overlay */}
-      <div className={styles.noiseOverlay} data-oid="t7oumq4" />
+      <div className={styles.noiseOverlay} />
 
       {/* Film Grain */}
-      <div className={styles.filmGrain} data-oid="wk1rak-" />
+      <div className={styles.filmGrain} />
 
       {/* Vignette Effect */}
-      <div className={styles.vignette} data-oid="hrs85bc" />
+      <div className={styles.vignette} />
 
       {/* Slideshow */}
-      <div className="absolute inset-0" data-oid="fe-e-gk">
+      <div className="absolute inset-0">
         {slides.map((slide, index) => (
           <div
             key={index}
@@ -87,11 +88,10 @@ const Hero = () => {
                 ? "opacity-100 scale-100"
                 : "opacity-0 scale-105"
             }`}
-            data-oid="pg6gdmr"
           >
             {/* Premium Gradient Overlays */}
-            <div className={styles.gradientOverlay} data-oid=":j:v7dm" />
-            <div className={styles.cinematicOverlay} data-oid="z-3pnwa" />
+            <div className={styles.gradientOverlay} />
+            <div className={styles.cinematicOverlay} />
 
             <img
               src={slideImages[index]}
@@ -100,14 +100,13 @@ const Hero = () => {
                 currentSlide === index ? "scale-110" : "scale-100"
               }`}
               loading={index === 0 ? "eager" : "lazy"}
-              data-oid="k4wkboh"
             />
           </div>
         ))}
       </div>
 
       {/* Floating Particles */}
-      <div className={styles.particles} data-oid="rmz5df.">
+      <div className={styles.particles}>
         {[...Array(20)].map((_, i) => (
           <div
             key={i}
@@ -117,114 +116,76 @@ const Hero = () => {
               animationDelay: `${Math.random() * 10}s`,
               animationDuration: `${15 + Math.random() * 10}s`,
             }}
-            data-oid="8pu.c8n"
           />
         ))}
       </div>
 
       {/* Content */}
-      <div
-        className="relative z-20 h-full flex items-center"
-        data-oid="41hlm98"
-      >
-        <div
-          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full"
-          data-oid="ux.7fbo"
-        >
+      <div className="relative z-20 h-full flex items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div
             className={`text-center text-white ${isLoaded ? styles.contentEnter : styles.contentHidden}`}
-            data-oid="gqdyw9v"
           >
             {/* Premium Badge */}
-            <div className={styles.premiumBadge} data-oid="9i5vl2p">
-              <span className={styles.badgeText} data-oid="eqie4ji">
-                PREMIUM TRADE SOLUTIONS
-              </span>
+            <div className={styles.premiumBadge}>
+              <span className={styles.badgeText}>PREMIUM TRADE SOLUTIONS</span>
             </div>
 
             <h1
               className={`${styles.heroTitle} text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 sm:mb-6`}
-              data-oid="-cy3ek4"
             >
-              <span className={styles.titleGradient} data-oid="ol_gyv4">
+              <span className={styles.titleGradient}>
                 {slides[currentSlide].title}
               </span>
             </h1>
 
             <p
               className={`${styles.heroDescription} text-lg sm:text-xl md:text-2xl lg:text-3xl mb-8 sm:mb-12`}
-              data-oid="5o10t0z"
             >
               {slides[currentSlide].description}
             </p>
 
-            <div
-              className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6"
-              data-oid="oble9n7"
-            >
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
               <Link
                 to={slides[currentSlide].link}
                 className={`${styles.ctaButton} ${styles.primaryCta} group`}
-                data-oid="1w3l237"
               >
                 <span
                   className={`${styles.ctaContent} ${i18n.language === "ar" ? "flex-row-reverse" : ""}`}
-                  data-oid="3g41oiz"
                 >
                   {slides[currentSlide].ctaText}
                   {i18n.language === "ar" ? (
-                    <ArrowLeft
-                      className="h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:-translate-x-1"
-                      data-oid="c2rjlqd"
-                    />
+                    <ArrowLeft className="h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:-translate-x-1" />
                   ) : (
-                    <ArrowRight
-                      className="h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:translate-x-1"
-                      data-oid="191kar1"
-                    />
+                    <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:translate-x-1" />
                   )}
                 </span>
-                <div className={styles.ctaGlow} data-oid="io:yv6a" />
+                <div className={styles.ctaGlow} />
               </Link>
 
-              <button
-                className={`${styles.ctaButton} ${styles.secondaryCta}`}
-                data-oid="49.wkjp"
-              >
-                <span className="flex items-center gap-2" data-oid="mngg4t1">
-                  <Play className="h-4 w-4" data-oid="da0o1._" />
+              <button className={`${styles.ctaButton} ${styles.secondaryCta}`}>
+                <span className="flex items-center gap-2">
+                  <Play className="h-4 w-4" />
                   Watch Story
                 </span>
               </button>
             </div>
 
             {/* Stats Bar */}
-            <div className={styles.statsBar} data-oid="33tfz85">
-              <div className={styles.stat} data-oid="7hlypzd">
-                <span className={styles.statNumber} data-oid="wuu27yb">
-                  15+
-                </span>
-                <span className={styles.statLabel} data-oid="y:-_9i:">
-                  Years Experience
-                </span>
+            <div className={styles.statsBar}>
+              <div className={styles.stat}>
+                <span className={styles.statNumber}>15+</span>
+                <span className={styles.statLabel}>Years Experience</span>
               </div>
-              <div className={styles.statDivider} data-oid="cvt.rf8" />
-              <div className={styles.stat} data-oid="22d2ar-">
-                <span className={styles.statNumber} data-oid="35cj83m">
-                  500+
-                </span>
-                <span className={styles.statLabel} data-oid="dn.837v">
-                  Global Clients
-                </span>
+              <div className={styles.statDivider} />
+              <div className={styles.stat}>
+                <span className={styles.statNumber}>500+</span>
+                <span className={styles.statLabel}>Global Clients</span>
               </div>
-              <div className={styles.statDivider} data-oid="hrtju8n" />
-              <div className={styles.stat} data-oid="f-toios">
-                <span className={styles.statNumber} data-oid="uzh_tzo">
-                  30+
-                </span>
-                <span className={styles.statLabel} data-oid="ifn57kz">
-                  Countries
-                </span>
+              <div className={styles.statDivider} />
+              <div className={styles.stat}>
+                <span className={styles.statNumber}>30+</span>
+                <span className={styles.statLabel}>Countries</span>
               </div>
             </div>
           </div>
@@ -232,24 +193,22 @@ const Hero = () => {
       </div>
 
       {/* Enhanced Navigation */}
-      <div className="hidden md:block" data-oid="3c8ms9h">
+      <div className="hidden md:block">
         <button
           onClick={() => handleManualNavigation(prevSlide)}
           className={`${styles.navButton} ${styles.navPrev}`}
           aria-label="Previous slide"
-          data-oid="3let-7f"
         >
-          <ChevronLeft className="h-6 w-6 sm:h-8 sm:w-8" data-oid="16on97m" />
-          <div className={styles.navButtonGlow} data-oid="nc-9t_j" />
+          <ChevronLeft className="h-6 w-6 sm:h-8 sm:w-8" />
+          <div className={styles.navButtonGlow} />
         </button>
         <button
           onClick={() => handleManualNavigation(nextSlide)}
           className={`${styles.navButton} ${styles.navNext}`}
           aria-label="Next slide"
-          data-oid="w6.tx:9"
         >
-          <ChevronRight className="h-6 w-6 sm:h-8 sm:w-8" data-oid="0j6dorf" />
-          <div className={styles.navButtonGlow} data-oid="2ab2c8u" />
+          <ChevronRight className="h-6 w-6 sm:h-8 sm:w-8" />
+          <div className={styles.navButtonGlow} />
         </button>
       </div>
 
@@ -258,19 +217,17 @@ const Hero = () => {
         onClick={() => setIsPaused(!isPaused)}
         className={styles.playPauseButton}
         aria-label={isPaused ? "Resume slideshow" : "Pause slideshow"}
-        data-oid="bi9ief7"
       >
         {isPaused ? (
-          <Play className="h-4 w-4" data-oid="yeejov9" />
+          <Play className="h-4 w-4" />
         ) : (
-          <Pause className="h-4 w-4" data-oid="3l-e9x3" />
+          <Pause className="h-4 w-4" />
         )}
       </button>
 
       {/* Enhanced Slide Indicators */}
       <div
         className={`${styles.slideIndicators} ${i18n.language === "ar" ? "flex-row-reverse" : ""}`}
-        data-oid="ph5n84w"
       >
         {slides.map((slide, index) => (
           <button
@@ -278,22 +235,19 @@ const Hero = () => {
             onClick={() => handleManualNavigation(() => setCurrentSlide(index))}
             className={`${styles.indicator} ${currentSlide === index ? styles.indicatorActive : ""}`}
             aria-label={`Go to slide ${index + 1}: ${slide.title}`}
-            data-oid="5tosv-n"
           >
-            <div className={styles.indicatorProgress} data-oid="uqmsodh" />
-            <div className={styles.indicatorGlow} data-oid="fn8g9in" />
+            <div className={styles.indicatorProgress} />
+            <div className={styles.indicatorGlow} />
           </button>
         ))}
       </div>
 
       {/* Scroll Indicator */}
-      <div className={styles.scrollIndicator} data-oid="-xuvs.5">
-        <div className={styles.scrollMouse} data-oid="ps.q0:p">
-          <div className={styles.scrollWheel} data-oid="h_duqj3" />
+      <div className={styles.scrollIndicator}>
+        <div className={styles.scrollMouse}>
+          <div className={styles.scrollWheel} />
         </div>
-        <span className={styles.scrollText} data-oid="zl_uugi">
-          Scroll to explore
-        </span>
+        <span className={styles.scrollText}>Scroll to explore</span>
       </div>
     </div>
   );

@@ -293,51 +293,51 @@ export default function BlogPage() {
 
   const getCategoryIcon = (category: string) => {
     const icons = {
-      "Supply Chain": <TrendingUp className="h-4 w-4" data-oid=":cbfcrn" />,
-      Documentation: <FileText className="h-4 w-4" data-oid="78:j9f6" />,
-      "Market Analysis": <Globe className="h-4 w-4" data-oid="kzgwnm9" />,
-      Technology: <MessageCircle className="h-4 w-4" data-oid="d9umhfl" />,
-      "Supplier Management": <Users className="h-4 w-4" data-oid="pce_0:y" />,
+      "Supply Chain": <TrendingUp className="h-4 w-4" data-oid=".:q:p:0" />,
+      Documentation: <FileText className="h-4 w-4" data-oid="5j-h0sa" />,
+      "Market Analysis": <Globe className="h-4 w-4" data-oid="-xwo._x" />,
+      Technology: <MessageCircle className="h-4 w-4" data-oid="6j4:4af" />,
+      "Supplier Management": <Users className="h-4 w-4" data-oid="sj.9opq" />,
     };
     return (
       icons[category as keyof typeof icons] || (
-        <Tag className="h-4 w-4" data-oid="6l9h_1_" />
+        <Tag className="h-4 w-4" data-oid="77z7co-" />
       )
     );
   };
 
   if (selectedPost) {
     return (
-      <div className="min-h-screen bg-gray-50" data-oid="1.oqa2l">
+      <div className="min-h-screen bg-gray-50" data-oid="bx7mn0m">
         {/* Header */}
-        <div className="bg-white shadow-sm border-b" data-oid="pcb4j57">
+        <div className="bg-white shadow-sm border-b" data-oid="7m3.yv:">
           <div
             className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"
-            data-oid="sy:z3h6"
+            data-oid="oog2z15"
           >
             <div
               className="flex items-center justify-between py-6"
-              data-oid="-f9nad9"
+              data-oid="_6sqntq"
             >
-              <div className="flex items-center gap-4" data-oid="eepri-1">
+              <div className="flex items-center gap-4" data-oid="aj_-cuf">
                 <Button
                   variant="outline"
                   onClick={() => setSelectedPost(null)}
                   className="flex items-center gap-2"
-                  data-oid="e6ungfu"
+                  data-oid="qpfaq16"
                 >
                   ← Back to Blog
                 </Button>
                 <Link
                   href="/"
                   className="text-trilogy-blue hover:underline"
-                  data-oid="b9s.14x"
+                  data-oid="gyqb601"
                 >
                   Home
                 </Link>
               </div>
-              <Link href="/dashboard" data-oid=":c:d6rt">
-                <Button variant="outline" data-oid="ge5ozd0">
+              <Link href="/dashboard" data-oid=".v.7tm4">
+                <Button variant="outline" data-oid="5kd:grn">
                   Dashboard
                 </Button>
               </Link>
@@ -348,54 +348,54 @@ export default function BlogPage() {
         {/* Article Content */}
         <div
           className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8"
-          data-oid="qwjw0:m"
+          data-oid="pkavxj-"
         >
           <article
             className="bg-white rounded-lg shadow-sm p-8"
-            data-oid="kwqy3:z"
+            data-oid="g8yb7_8"
           >
             {/* Article Header */}
-            <header className="mb-8" data-oid="r8c2umh">
-              <div className="flex items-center gap-2 mb-4" data-oid="7575cqq">
+            <header className="mb-8" data-oid="y1:by-9">
+              <div className="flex items-center gap-2 mb-4" data-oid="qvk3__7">
                 {getCategoryIcon(selectedPost.category)}
                 <span
                   className="text-trilogy-blue font-medium"
-                  data-oid="ils8dmc"
+                  data-oid="20g-_81"
                 >
                   {selectedPost.category}
                 </span>
               </div>
               <h1
                 className="text-4xl font-bold text-gray-900 mb-4"
-                data-oid="t3zfq0c"
+                data-oid="cl3o6.a"
               >
                 {selectedPost.title}
               </h1>
               <div
                 className="flex items-center gap-6 text-gray-600"
-                data-oid="j1w40wr"
+                data-oid=":hmbo5u"
               >
-                <div className="flex items-center gap-2" data-oid="_1vyupx">
-                  <User className="h-4 w-4" data-oid="iq_17kx" />
-                  <span data-oid="z5h1y4y">{selectedPost.author}</span>
+                <div className="flex items-center gap-2" data-oid="os5a_43">
+                  <User className="h-4 w-4" data-oid="-pyo3nn" />
+                  <span data-oid="a8c-p0_">{selectedPost.author}</span>
                 </div>
-                <div className="flex items-center gap-2" data-oid="nmq_9ot">
-                  <Calendar className="h-4 w-4" data-oid="1udco-z" />
-                  <span data-oid="-0j9yvh">
+                <div className="flex items-center gap-2" data-oid="tn5hl9l">
+                  <Calendar className="h-4 w-4" data-oid="v0o.q_8" />
+                  <span data-oid="bjbjjnw">
                     {formatDate(selectedPost.publishedAt)}
                   </span>
                 </div>
-                <div className="flex items-center gap-2" data-oid="o..jm:.">
-                  <Clock className="h-4 w-4" data-oid="iurrgiy" />
-                  <span data-oid="o:2w8:s">{selectedPost.readTime}</span>
+                <div className="flex items-center gap-2" data-oid="6k78kje">
+                  <Clock className="h-4 w-4" data-oid="etgpd19" />
+                  <span data-oid="q-vfvk4">{selectedPost.readTime}</span>
                 </div>
               </div>
-              <div className="flex flex-wrap gap-2 mt-4" data-oid="2bg4u48">
+              <div className="flex flex-wrap gap-2 mt-4" data-oid="bds7wrv">
                 {selectedPost.tags.map((tag) => (
                   <span
                     key={tag}
                     className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm"
-                    data-oid="nw6yeqs"
+                    data-oid="81l5xc9"
                   >
                     {tag}
                   </span>
@@ -404,16 +404,16 @@ export default function BlogPage() {
             </header>
 
             {/* Article Body */}
-            <div className="prose prose-lg max-w-none" data-oid="dk1tca4">
+            <div className="prose prose-lg max-w-none" data-oid="vbgph.w">
               <div
                 className="text-xl text-gray-600 mb-8 font-medium leading-relaxed"
-                data-oid="1ejjlr-"
+                data-oid="shjiy3r"
               >
                 {selectedPost.excerpt}
               </div>
               <div
                 className="whitespace-pre-line text-gray-800 leading-relaxed"
-                data-oid="ziwc1mc"
+                data-oid="m6rgj89"
               >
                 {selectedPost.content}
               </div>
@@ -422,26 +422,26 @@ export default function BlogPage() {
             {/* Call to Action */}
             <div
               className="mt-12 p-6 bg-gradient-to-r from-trilogy-blue to-trilogy-navy rounded-lg text-white"
-              data-oid="5cmg8an"
+              data-oid="8317.zr"
             >
-              <h3 className="text-xl font-bold mb-2" data-oid="3hlt9ah">
+              <h3 className="text-xl font-bold mb-2" data-oid="j9iggsb">
                 Ready to Transform Your Global Trade Operations?
               </h3>
-              <p className="mb-4" data-oid="lhcfjyb">
+              <p className="mb-4" data-oid="sn.hvhc">
                 Get expert guidance from our team of international trade
                 specialists. Chat with Hexabot or contact us directly for
                 personalized solutions.
               </p>
-              <div className="flex gap-4" data-oid="7y8y3a1">
-                <Link href="/" data-oid="nm1nsn3">
-                  <Button variant="secondary" data-oid="5:8ecs.">
+              <div className="flex gap-4" data-oid="n9a-0dk">
+                <Link href="/" data-oid="bn2v--b">
+                  <Button variant="secondary" data-oid="2d:uu1w">
                     Chat with Hexabot
                   </Button>
                 </Link>
                 <Button
                   variant="outline"
                   className="text-white border-white hover:bg-white hover:text-trilogy-blue"
-                  data-oid="sr-ptr0"
+                  data-oid="sj9t8f:"
                 >
                   Contact Our Experts
                 </Button>
@@ -454,36 +454,36 @@ export default function BlogPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50" data-oid="a5tfkr.">
+    <div className="min-h-screen bg-gray-50" data-oid="ys0rutp">
       {/* Header */}
-      <div className="bg-white shadow-sm border-b" data-oid="juvjupd">
+      <div className="bg-white shadow-sm border-b" data-oid="_-6wvqg">
         <div
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
-          data-oid="gx.z3a_"
+          data-oid="azp19zs"
         >
           <div
             className="flex items-center justify-between py-6"
-            data-oid="q_h8u9r"
+            data-oid="pmt_fiq"
           >
-            <div data-oid="bbrzqvr">
+            <div data-oid="lo2.wb-">
               <h1
                 className="text-3xl font-bold text-gray-900"
-                data-oid="c3-xm2e"
+                data-oid="-uwl_1_"
               >
                 Trilogy Trading Blog
               </h1>
-              <p className="text-gray-600" data-oid="hz7m2-:">
+              <p className="text-gray-600" data-oid="_wmk4_i">
                 Insights, strategies, and trends in global trade
               </p>
             </div>
-            <div className="flex items-center gap-4" data-oid="uu8kqgu">
-              <Link href="/" data-oid="4wx_czt">
-                <Button variant="outline" data-oid="ys9eewn">
+            <div className="flex items-center gap-4" data-oid="8drq884">
+              <Link href="/" data-oid=".59zrop">
+                <Button variant="outline" data-oid="-d_3:bp">
                   Chat with Hexabot
                 </Button>
               </Link>
-              <Link href="/dashboard" data-oid="evnck.r">
-                <Button variant="outline" data-oid="z2_l7h.">
+              <Link href="/dashboard" data-oid="b3qvdjd">
+                <Button variant="outline" data-oid="yuq1l2d">
                   Dashboard
                 </Button>
               </Link>
@@ -494,18 +494,18 @@ export default function BlogPage() {
 
       <div
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8"
-        data-oid="_luywac"
+        data-oid="wwrx500"
       >
         {/* Search and Filters */}
-        <div className="mb-8" data-oid="-qg5v25">
+        <div className="mb-8" data-oid="y51chnm">
           <div
             className="flex flex-col md:flex-row gap-4 mb-6"
-            data-oid="33_ysrs"
+            data-oid="r:w08rw"
           >
-            <div className="flex-1 relative" data-oid="m4cnznm">
+            <div className="flex-1 relative" data-oid="5glww6x">
               <Search
                 className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4"
-                data-oid=".th1hkr"
+                data-oid="46ndtz9"
               />
 
               <Input
@@ -513,10 +513,10 @@ export default function BlogPage() {
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="pl-10"
-                data-oid="kiho4ze"
+                data-oid=":gxw2c4"
               />
             </div>
-            <div className="flex gap-2 flex-wrap" data-oid="e0v98l-">
+            <div className="flex gap-2 flex-wrap" data-oid="i:.bu_r">
               {categories.map((category) => (
                 <Button
                   key={category}
@@ -525,7 +525,7 @@ export default function BlogPage() {
                   }
                   onClick={() => setSelectedCategory(category)}
                   className="text-sm"
-                  data-oid="pyt6-th"
+                  data-oid="3zvgvry"
                 >
                   {category}
                 </Button>
@@ -536,79 +536,79 @@ export default function BlogPage() {
 
         {/* Featured Posts */}
         {selectedCategory === "All" && searchTerm === "" && (
-          <div className="mb-12" data-oid=".pq4_5q">
+          <div className="mb-12" data-oid="_0fmoww">
             <h2
               className="text-2xl font-bold text-gray-900 mb-6"
-              data-oid="hdikbs-"
+              data-oid="7r4nbdc"
             >
               Featured Articles
             </h2>
             <div
               className="grid grid-cols-1 lg:grid-cols-2 gap-8"
-              data-oid="_s4c2-t"
+              data-oid=":aqh141"
             >
               {featuredPosts.map((post) => (
                 <Card
                   key={post.id}
                   className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
-                  data-oid="uf_csd2"
+                  data-oid="gzcqj.n"
                 >
-                  <CardContent className="p-0" data-oid="4-avgyf">
-                    <div className="p-6" data-oid="ha.cwey">
+                  <CardContent className="p-0" data-oid="s79g7op">
+                    <div className="p-6" data-oid="1.kv05z">
                       <div
                         className="flex items-center gap-2 mb-3"
-                        data-oid="pc3sa91"
+                        data-oid="69u9db3"
                       >
                         {getCategoryIcon(post.category)}
                         <span
                           className="text-trilogy-blue font-medium text-sm"
-                          data-oid="1dni_7v"
+                          data-oid="hsuj890"
                         >
                           {post.category}
                         </span>
                         <span
                           className="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full font-medium"
-                          data-oid="a5yg8.4"
+                          data-oid="bt7:_.p"
                         >
                           Featured
                         </span>
                       </div>
                       <h3
                         className="text-xl font-bold text-gray-900 mb-3 line-clamp-2"
-                        data-oid="3_j149d"
+                        data-oid="4a1u:eh"
                       >
                         {post.title}
                       </h3>
                       <p
                         className="text-gray-600 mb-4 line-clamp-3"
-                        data-oid=".huynkd"
+                        data-oid="av4f:kq"
                       >
                         {post.excerpt}
                       </p>
                       <div
                         className="flex items-center justify-between"
-                        data-oid="_ysr2dh"
+                        data-oid="nezkpyu"
                       >
                         <div
                           className="flex items-center gap-4 text-sm text-gray-500"
-                          data-oid="dk2pv5y"
+                          data-oid="3upvzfq"
                         >
-                          <span data-oid="wvixf2m">{post.author}</span>
-                          <span data-oid="ylw1y:z">
+                          <span data-oid="4_1_x7k">{post.author}</span>
+                          <span data-oid="q:oquhk">
                             {formatDate(post.publishedAt)}
                           </span>
-                          <span data-oid="t.yu0fc">{post.readTime}</span>
+                          <span data-oid="vq4b1dj">{post.readTime}</span>
                         </div>
                         <Button
                           variant="ghost"
                           onClick={() => setSelectedPost(post)}
                           className="text-trilogy-blue hover:text-trilogy-navy"
-                          data-oid="_o8q-gv"
+                          data-oid="884i:jf"
                         >
                           Read More{" "}
                           <ArrowRight
                             className="h-4 w-4 ml-1"
-                            data-oid="4q1:ut0"
+                            data-oid="7.9:w87"
                           />
                         </Button>
                       </div>
@@ -621,10 +621,10 @@ export default function BlogPage() {
         )}
 
         {/* All Posts */}
-        <div data-oid="egp1jb9">
+        <div data-oid="j6:r0ud">
           <h2
             className="text-2xl font-bold text-gray-900 mb-6"
-            data-oid="guet_yd"
+            data-oid="etg_e_5"
           >
             {selectedCategory === "All"
               ? "All Articles"
@@ -634,8 +634,8 @@ export default function BlogPage() {
           </h2>
 
           {filteredPosts.length === 0 ? (
-            <div className="text-center py-12" data-oid="puyj-ud">
-              <p className="text-gray-500 text-lg" data-oid="t:75jy4">
+            <div className="text-center py-12" data-oid="kfc.jdx">
+              <p className="text-gray-500 text-lg" data-oid="x__wd1u">
                 No articles found matching your criteria.
               </p>
               <Button
@@ -645,7 +645,7 @@ export default function BlogPage() {
                   setSelectedCategory("All");
                 }}
                 className="mt-4"
-                data-oid="u7xs1g."
+                data-oid="0j1c0wa"
               >
                 Clear Filters
               </Button>
@@ -653,31 +653,31 @@ export default function BlogPage() {
           ) : (
             <div
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-              data-oid="g4n1b4h"
+              data-oid="mxtu_.j"
             >
               {filteredPosts.map((post) => (
                 <Card
                   key={post.id}
                   className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
-                  data-oid="cz6rzc2"
+                  data-oid="q9nch4x"
                 >
-                  <CardContent className="p-0" data-oid="r1pcysw">
-                    <div className="p-6" data-oid="6-u-vl6">
+                  <CardContent className="p-0" data-oid="-5:1:2c">
+                    <div className="p-6" data-oid="if7rv.l">
                       <div
                         className="flex items-center gap-2 mb-3"
-                        data-oid="r7ropc1"
+                        data-oid="ya59j9r"
                       >
                         {getCategoryIcon(post.category)}
                         <span
                           className="text-trilogy-blue font-medium text-sm"
-                          data-oid=".-7-po4"
+                          data-oid="welso6j"
                         >
                           {post.category}
                         </span>
                         {post.featured && (
                           <span
                             className="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full font-medium"
-                            data-oid="2499dl0"
+                            data-oid="6jzz6zd"
                           >
                             Featured
                           </span>
@@ -685,25 +685,25 @@ export default function BlogPage() {
                       </div>
                       <h3
                         className="text-lg font-bold text-gray-900 mb-3 line-clamp-2"
-                        data-oid="gw5vd2k"
+                        data-oid="2_i30m."
                       >
                         {post.title}
                       </h3>
                       <p
                         className="text-gray-600 mb-4 line-clamp-3 text-sm"
-                        data-oid="bq1949g"
+                        data-oid="p32re9l"
                       >
                         {post.excerpt}
                       </p>
                       <div
                         className="flex flex-wrap gap-1 mb-4"
-                        data-oid="wowx0kr"
+                        data-oid="6.6.o66"
                       >
                         {post.tags.slice(0, 3).map((tag) => (
                           <span
                             key={tag}
                             className="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs"
-                            data-oid="f-nz9k2"
+                            data-oid="61f6w6l"
                           >
                             {tag}
                           </span>
@@ -711,14 +711,14 @@ export default function BlogPage() {
                       </div>
                       <div
                         className="flex items-center justify-between"
-                        data-oid="qvu99f8"
+                        data-oid="1zzv0.g"
                       >
                         <div
                           className="text-xs text-gray-500"
-                          data-oid="uy0j:x_"
+                          data-oid="j3md6kh"
                         >
-                          <div data-oid="1p8kkvv">{post.author}</div>
-                          <div data-oid="1d4uj8:">
+                          <div data-oid="dwppe_2">{post.author}</div>
+                          <div data-oid="j0056k3">
                             {formatDate(post.publishedAt)} • {post.readTime}
                           </div>
                         </div>
@@ -727,12 +727,12 @@ export default function BlogPage() {
                           size="sm"
                           onClick={() => setSelectedPost(post)}
                           className="text-trilogy-blue hover:text-trilogy-navy"
-                          data-oid="d52dzdr"
+                          data-oid=":7czcxe"
                         >
                           Read{" "}
                           <ArrowRight
                             className="h-3 w-3 ml-1"
-                            data-oid="ay.vm4a"
+                            data-oid="uthv6ov"
                           />
                         </Button>
                       </div>
@@ -745,18 +745,18 @@ export default function BlogPage() {
         </div>
 
         {/* Newsletter Signup */}
-        <div className="mt-16" data-oid="xnl8mll">
+        <div className="mt-16" data-oid="ypxj2-c">
           <Card
             className="bg-gradient-to-r from-trilogy-blue to-trilogy-navy text-white"
-            data-oid="uzey-65"
+            data-oid="aaamawx"
           >
-            <CardContent className="p-8 text-center" data-oid="ha8x:d8">
-              <h3 className="text-2xl font-bold mb-4" data-oid="90h_0jj">
+            <CardContent className="p-8 text-center" data-oid="raw699f">
+              <h3 className="text-2xl font-bold mb-4" data-oid="2_v1l72">
                 Stay Updated with Global Trade Insights
               </h3>
               <p
                 className="text-blue-100 mb-6 max-w-2xl mx-auto"
-                data-oid="ek5bvz1"
+                data-oid="ptb5:og"
               >
                 Get the latest articles, market analysis, and trade strategies
                 delivered to your inbox. Join 5,000+ professionals who trust our
@@ -764,23 +764,23 @@ export default function BlogPage() {
               </p>
               <div
                 className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"
-                data-oid="9_os8_h"
+                data-oid="ch-d31n"
               >
                 <Input
                   placeholder="Enter your email"
                   className="bg-white text-gray-900"
-                  data-oid="g2g0rau"
+                  data-oid="77w1o86"
                 />
 
                 <Button
                   variant="secondary"
                   className="whitespace-nowrap"
-                  data-oid="2vb.5mz"
+                  data-oid="t1ltb86"
                 >
                   Subscribe Now
                 </Button>
               </div>
-              <p className="text-blue-100 text-sm mt-4" data-oid="3_8bw9-">
+              <p className="text-blue-100 text-sm mt-4" data-oid="yg41yvi">
                 No spam. Unsubscribe anytime. Read our privacy policy.
               </p>
             </CardContent>
@@ -788,16 +788,16 @@ export default function BlogPage() {
         </div>
 
         {/* Contact CTA */}
-        <div className="mt-12 text-center" data-oid="e-j93m6">
+        <div className="mt-12 text-center" data-oid="6nq49_3">
           <h3
             className="text-xl font-bold text-gray-900 mb-4"
-            data-oid="3a.gt-5"
+            data-oid="q442-bd"
           >
             Need Expert Guidance for Your Global Trade Operations?
           </h3>
           <p
             className="text-gray-600 mb-6 max-w-2xl mx-auto"
-            data-oid="a6hj007"
+            data-oid="ilw0xqg"
           >
             Our team of international trade specialists is ready to help you
             navigate complex global markets, optimize your supply chain, and
@@ -805,19 +805,19 @@ export default function BlogPage() {
           </p>
           <div
             className="flex flex-col sm:flex-row gap-4 justify-center"
-            data-oid="1zlnw8o"
+            data-oid="-bzpir3"
           >
-            <Link href="/" data-oid="fu9grp6">
+            <Link href="/" data-oid="zz:07fp">
               <Button
                 className="bg-trilogy-blue hover:bg-trilogy-navy"
-                data-oid="8kyl2o7"
+                data-oid="y0zumus"
               >
-                <MessageCircle className="h-4 w-4 mr-2" data-oid="4xexky1" />
+                <MessageCircle className="h-4 w-4 mr-2" data-oid="ygnlzmn" />
                 Chat with Hexabot
               </Button>
             </Link>
-            <Button variant="outline" data-oid="x524brk">
-              <Phone className="h-4 w-4 mr-2" data-oid="wbf9hhj" />
+            <Button variant="outline" data-oid="yyg21f.">
+              <Phone className="h-4 w-4 mr-2" data-oid="k--1hf6" />
               Call +962796564791
             </Button>
           </div>

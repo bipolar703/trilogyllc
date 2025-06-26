@@ -68,8 +68,9 @@ const Navbar = () => {
 
   const navItems = [
     { id: "services", path: "/services", messageId: "nav.services" },
+    { id: "products", path: "/products", messageId: "nav.products" },
     { id: "about", path: "/#about", messageId: "nav.about" },
-    { id: "contact", path: "/#contact", messageId: "nav.contact" },
+    { id: "contact", path: "/#contact", messageId: "nav.contactUs" },
   ];
 
   const navClasses = `
@@ -79,18 +80,14 @@ const Navbar = () => {
   `;
 
   return (
-    <nav className={navClasses} data-oid="sf6ui4.">
-      <div
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
-        data-oid="5hnj6cg"
-      >
+    <nav className={navClasses}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           className={`flex items-center justify-between h-16 ${currentLang === "ar" ? "flex-row-reverse" : ""}`}
-          data-oid="wbzevel"
         >
           {/* Logo */}
-          <div className="flex-shrink-0" data-oid=".lxpa4-">
-            <Link to="/" className="block" data-oid="wq7m_xv">
+          <div className="flex-shrink-0">
+            <Link to="/" className="block">
               <img
                 src={currentLang === "ar" ? MainLogoAr : MainLogo}
                 alt="Trilogy Trading"
@@ -99,16 +96,14 @@ const Navbar = () => {
                     ? "[filter:brightness(0)_saturate(100%)_invert(20%)_sepia(10%)_saturate(500%)_hue-rotate(180deg)_brightness(95%)_contrast(90%)]"
                     : "brightness-100"
                 }`}
-                data-oid="ri-4y8x"
               />
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:block" data-oid="hurz45p">
+          <div className="hidden md:block">
             <div
               className={`flex items-center gap-x-8 ${currentLang === "ar" ? "flex-row-reverse" : ""}`}
-              data-oid="z0q3_b2"
             >
               {navItems.map((item) => (
                 <Link
@@ -120,16 +115,23 @@ const Navbar = () => {
                     ${scrolled ? "text-gray-600 hover:text-brand-gold" : "text-white hover:text-brand-gold"}
                     ${location.pathname === item.path ? "text-brand-gold" : ""}
                   `}
-                  data-oid="to.l31b"
                 >
                   {t(item.messageId)}
                 </Link>
               ))}
-              <div
-                className={`${currentLang === "ar" ? "mr-4" : "ml-4"}`}
-                data-oid="3rpt0ak"
+              <Link
+                to="/blog"
+                onClick={(e) => handleNavigation(e, '/blog')}
+                className={`
+                  text-base font-medium capitalize transition-colors duration-200
+                  ${scrolled ? "text-gray-600 hover:text-brand-gold" : "text-white hover:text-brand-gold"}
+                  ${location.pathname === '/blog' ? "text-brand-gold" : ""}
+                `}
               >
-                <LanguageSwitcher scrolled={scrolled} data-oid="eodx:.6" />
+                Blog
+              </Link>
+              <div className={`${currentLang === "ar" ? "mr-4" : "ml-4"}`}>
+                <LanguageSwitcher scrolled={scrolled} />
               </div>
             </div>
           </div>
@@ -137,7 +139,6 @@ const Navbar = () => {
           {/* Mobile menu button */}
           <div
             className={`md:hidden ${currentLang === "ar" ? "order-first" : "order-last"}`}
-            data-oid="ajdb7:r"
           >
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -147,20 +148,11 @@ const Navbar = () => {
                 focus:outline-none transition duration-150 ease-in-out
               `}
               aria-label={isOpen ? "Close menu" : "Open menu"}
-              data-oid="7-ye6fm"
             >
               {isOpen ? (
-                <X
-                  className="block h-6 w-6"
-                  aria-hidden="true"
-                  data-oid="utunkl8"
-                />
+                <X className="block h-6 w-6" aria-hidden="true" />
               ) : (
-                <Menu
-                  className="block h-6 w-6"
-                  aria-hidden="true"
-                  data-oid="l4og461"
-                />
+                <Menu className="block h-6 w-6" aria-hidden="true" />
               )}
             </button>
           </div>
@@ -169,13 +161,12 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden" data-oid="jyet445">
+        <div className="md:hidden">
           <div
             className={`
             px-4 pt-2 pb-3 space-y-1 bg-white/90 backdrop-blur-md shadow-sm
             ${currentLang === "ar" ? "text-right" : "text-left"}
           `}
-            data-oid="7md4:uy"
           >
             {navItems.map((item) => (
               <Link
@@ -190,16 +181,28 @@ const Navbar = () => {
                   setIsOpen(false);
                   handleNavigation(e, item.path);
                 }}
-                data-oid="fyljt:z"
               >
                 {t(item.messageId)}
               </Link>
             ))}
+            <Link
+              to="/blog"
+              className={`
+                block py-2 px-3 rounded-md text-base font-medium
+                ${location.pathname === '/blog' ? "text-brand-gold bg-gray-50" : "text-gray-600"}
+                hover:text-brand-gold hover:bg-gray-50
+              `}
+              onClick={(e) => {
+                setIsOpen(false);
+                handleNavigation(e, '/blog');
+              }}
+            >
+              Blog
+            </Link>
             <div
               className={`py-2 px-3 ${currentLang === "ar" ? "text-right" : "text-left"}`}
-              data-oid="j-mvoxz"
             >
-              <LanguageSwitcher scrolled={true} data-oid="biy._j." />
+              <LanguageSwitcher scrolled={true} />
             </div>
           </div>
         </div>
